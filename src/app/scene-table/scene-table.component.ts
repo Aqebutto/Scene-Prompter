@@ -30,16 +30,9 @@ export class SceneTableComponent implements OnInit {
   }
 
   getScenes() {
-    const scenes = localStorage.getItem('scenes');
-    if (scenes) {
-      this.scenes = JSON.parse(scenes);
-      console.log(this.scenes);
-    } else {
-      this.http.get<Scene[]>(this.apiUrl).subscribe((scenes) => {
-        this.scenes = scenes;
-        localStorage.setItem('scenes', JSON.stringify(this.scenes));
-      });
-    }
+    this.http.get<Scene[]>('./assets/scenes.json').subscribe((data) => {
+      console.log(data);
+    });
   }
 
   addPastedScenes(pasteText: string) {
