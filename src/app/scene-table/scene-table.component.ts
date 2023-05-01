@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 interface Scene {
   id: number;
@@ -15,7 +16,8 @@ interface Scene {
   styleUrls: ['./scene-table.component.scss'],
 })
 export class SceneTableComponent implements OnInit {
-  scenes: Scene[] = [];
+  scenes$: Observable<Scene[]> = new Observable<Scene[]>();
+
   apiUrl = 'assets/scenes.json';
   editableSceneId: number | null = null;
   editableScene: Partial<Scene> = {};
@@ -23,10 +25,16 @@ export class SceneTableComponent implements OnInit {
   newScene: Partial<Scene> = {};
   pasteScenes: string = '';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    this.scenes$ = this.http.get<Scene[]>('./assets/scenes.json');
+    // sub to scenes$ and log them
+    this.scenes$.subscribe((data) => {
+      console.log(data);
+    });
+  }
 
   ngOnInit(): void {
-    this.getScenes();
+    this.scenes$ = this.http.get<Scene[]>('./assets/scenes.json');
   }
 
   getScenes() {
@@ -74,7 +82,7 @@ export class SceneTableComponent implements OnInit {
       newScenes.push(currentScene as Scene);
     }
 
-    this.scenes.push(...newScenes);
+    // this.scenes.push(...newScenes);
     this.saveScenes();
   }
 
@@ -86,27 +94,27 @@ export class SceneTableComponent implements OnInit {
       original_text: scene.original_text || '',
       prompt: scene.prompt || '',
     };
-    this.scenes.push(newScene);
+    // this.scenes.push(newScene);
     this.newScene = {};
     this.saveScenes();
   }
 
   updateScene(id: number, scene: Partial<Scene>) {
-    const index = this.scenes.findIndex((s) => s.id === id);
-    this.scenes[index] = {
-      ...this.scenes[index],
-      ...scene,
-    };
+    // const index = this.scenes.findIndex((s) => s.id === id);
+    // this.scenes[index] = {
+    //   ...this.scenes[index],
+    //   ...scene,
+    // };
     this.saveScenes();
   }
 
   deleteScene(id: number) {
-    this.scenes = this.scenes.filter((scene) => scene.id !== id);
+    // this.scenes = this.scenes.filter((scene) => scene.id !== id);
     this.saveScenes();
   }
 
   private saveScenes() {
-    localStorage.setItem('scenes', JSON.stringify(this.scenes));
+    // localStorage.setItem('scenes', JSON.stringify(this.scenes));
   }
 
   editScene(scene: Scene) {
