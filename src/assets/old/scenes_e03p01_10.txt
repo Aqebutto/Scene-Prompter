@@ -1,0 +1,50 @@
+Time: 0:
+Find a subject(s) and activity in this text:
+In the heart of ancient Babylon, where the grandeur of human achievement reached its zenith, a young Hebrew captive named Daniel found himself enmeshed in the enigmatic machinations of royal power.
+Now use that subject(s) and activity to make a prompt
+====
+Time: 10:
+Find a subject(s) and activity in this text:
+Torn from his homeland, chosen for his intellect, and forced to serve a king known for both his wisdom and his cruelty, Daniel was a stranger in a land of splendor and mystery.
+Now use that subject(s) and activity to make a prompt
+====
+Time: 20:
+Find a subject(s) and activity in this text:
+King Nebuchadnezzar, the ruler of the known world, was tormented by dreams. These were not mere illusions of sleep but profound visions that shattered his peace, defying the interpretation of his wisest scholars, magicians, and soothsayers.
+Now use that subject(s) and activity to make a prompt
+====
+Time: 30:
+Find a subject(s) and activity in this text:
+In this epic saga, the king's dream and Daniel's divine gift of interpretation collide in an event that would forever shift the course of human history.
+Now use that subject(s) and activity to make a prompt
+====
+Time: 40:
+Find a subject(s) and activity in this text:
+From the opulent courts of Babylon to the humble quarters of the Hebrew captives, we explore the stark contrast between human power and divine wisdom.
+Now use that subject(s) and activity to make a prompt
+====
+Time: 50:
+Find a subject(s) and activity in this text:
+We witness the courage of a young man standing firm in his faith, his story intertwined with prophetic visions that span the epochs of empires, reaching even into our own time.
+Now use that subject(s) and activity to make a prompt
+====
+Time: 60:
+Find a subject(s) and activity in this text:
+As our story unfolds, we are reminded of the unfathomable depths of divine wisdom as Daniel, guided by a power beyond human comprehension, unravels the dream of a mighty king.
+Now use that subject(s) and activity to make a prompt
+====
+Time: 70:
+Find a subject(s) and activity in this text:
+This is not just an exploration of history; it's a journey into prophecy, a testament to faith, and a compelling reminder that no matter the circumstances, the ultimate sovereignty belongs to God.
+Now use that subject(s) and activity to make a prompt
+====
+Time: 80:
+Find a subject(s) and activity in this text:
+So, prepare to embark on this journey, back to Babylon's towering ziggurats and hanging gardens, where a young prophet named Daniel dared to speak truth to power, illuminating the unfolding of God's grand design.
+Now use that subject(s) and activity to make a prompt
+====
+Time: 90:
+Find a subject(s) and activity in this text:
+This is the tale of 'Daniel: The Interpreter of Mysteries.'
+Now use that subject(s) and activity to make a prompt
+====

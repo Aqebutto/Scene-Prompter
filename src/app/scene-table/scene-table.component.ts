@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 interface Scene {
-  id: number;
+  id?: number;
   time: number;
   original_text: string;
   prompt: string;
@@ -24,23 +24,71 @@ export class SceneTableComponent implements OnInit {
   updatedScene: Partial<Scene> = {};
   newScene: Partial<Scene> = {};
   pasteScenes: string = '';
+  generatedText: string = '';
 
   constructor(private http: HttpClient) {
-    this.scenes$ = this.http.get<Scene[]>('./assets/scenes.json');
+    // this.scenes$ = this.http.get<Scene[]>('./assets/scenes.json');
     // sub to scenes$ and log them
-    this.scenes$.subscribe((data) => {
-      console.log(data);
-    });
   }
 
   ngOnInit(): void {
-    this.scenes$ = this.http.get<Scene[]>('./assets/scenes.json');
+    this.getScenes();
+    this.scenes$.subscribe((data) => {
+      console.log(data);
+    });
+    // this.scenes$ = this.http.get<Scene[]>('./assets/scenes.json');
   }
 
   getScenes() {
+    const fileUrl = 'assets/data.txt';
+
+    this.http.get(fileUrl, { responseType: 'text' }).subscribe((data) => {
+      const scenes: Scene[] = [];
+
+      const lines = data.split('====');
+      for (const line of lines) {
+        const trimmedLine = line.trim();
+        if (trimmedLine) {
+          const timeMatch = trimmedLine.match(/Time: (\d+):/);
+          const originalTextMatch = trimmedLine.match(
+            /Find a subject\(s\) and activity in this text:\n(.+)/s
+          );
+          const promptMatch = trimmedLine.match(
+            /Now use that subject\(s\) and activity to make a prompt\n(.+)/s
+          );
+
+          if (timeMatch && originalTextMatch && promptMatch) {
+            const time = parseInt(timeMatch[1], 10);
+            const originalText = originalTextMatch[1].trim();
+            const prompt = promptMatch[1].trim();
+
+            scenes.push({
+              time,
+              original_text: originalText,
+              prompt,
+            });
+          }
+        }
+      }
+
+      this.scenes$ = new Observable<Scene[]>((subscriber) => {
+        subscriber.next(scenes);
+        subscriber.complete();
+      });
+    });
+  }
+
+  getScenesFromJSON() {
     this.http.get<Scene[]>('./assets/scenes.json').subscribe((data) => {
       console.log(data);
     });
+  }
+
+  generatePrompt() {
+    const scriptText = '';
+    // this.sceneService.generateText(scriptText).then((generatedText) => {
+    //   console.log(generatedText);
+    // });
   }
 
   addPastedScenes(pasteText: string) {
@@ -118,7 +166,7 @@ export class SceneTableComponent implements OnInit {
   }
 
   editScene(scene: Scene) {
-    this.editableSceneId = scene.id;
+    //this.editableSceneId = scene.id;
     this.editableScene = { ...scene };
     this.saveScenes();
   }

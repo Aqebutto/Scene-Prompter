@@ -75,12 +75,12 @@
           Time
         </th>
         <th
-          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+          class="px-6 py-3 text-left text-xs font-medium text-yellow-500 uppercase tracking-wider"
         >
           Original_text
         </th>
         <th
-          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+          class="px-6 py-3 text-left text-xs font-medium text-yellow-700 uppercase tracking-wider"
         >
           Prompt
         </th>
@@ -89,11 +89,11 @@
         >
           Image
         </th>
-        <th
+        <!-- <th
           class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
         >
           Actions
-        </th>
+        </th> -->
       </tr>
     </thead>
     <tbody class="bg-white divide-y divide-gray-200">
@@ -116,7 +116,7 @@
               class="w-16 h-16 object-cover"
             />
           </td>
-          <td class="px-6 py-4 whitespace-nowrap">
+          <!-- <td class="px-6 py-4 whitespace-nowrap">
             <button
               (click)="scene.id && deleteScene(scene.id)"
               class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
@@ -166,12 +166,12 @@
             >
               Cancel
             </button>
-          </td>
+          </td> -->
         </tr>
       </ng-container>
 
       <!-- Edit scene modal -->
-      <ng-template #editSceneModal let-modal>
+      <!-- <ng-template #editSceneModal let-modal>
         <div class="modal-body">
           <form (ngSubmit)="updateScene(modal.id, editableScene)">
             <div class="form-group">
@@ -196,7 +196,7 @@
             <button type="submit" class="btn btn-primary">Save</button>
           </form>
         </div>
-      </ng-template>
+      </ng-template> -->
     </tbody>
   </table>
 </div>
