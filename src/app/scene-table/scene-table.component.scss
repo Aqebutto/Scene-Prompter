@@ -64,3 +64,61 @@ td {
     }
   }
 }
+// Image styling to make it smaller
+img {
+  max-width: 500px; // Set this value to your preferred maximum width
+  height: auto; // This maintains the aspect ratio
+  display: block; // This removes any unwanted space below the image
+  margin: 0 auto; // This centers the image if its container is wider than the image
+}
+// Specific class for the smaller images
+.img-smaller {
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+button.clicked {
+  background-color: red !important;
+  hover: bg-red-700 !important;
+  focus: ring-red-500 !important;
+}
+button {
+  :focus {
+    background-color: red;
+  }
+}
+// Base styling for the button
+.btn-generate {
+  background-color: #3498db; // Sky blue color
+  color: #ffffff; // White text
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease; // Smooth transition for hover effects
+
+  // Adding a slight shadow for depth
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: #2980b9; // Darken the color slightly on hover
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1); // Increase shadow on hover
+  }
+
+  &:active {
+    transform: scale(0.98); // Slight shrink effect when button is clicked
+  }
+
+  &:focus {
+    outline: none; // Remove default focus outline
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3); // Add a light blue focus ring
+  }
+
+  // If you want to add a disabled state
+  &:disabled {
+    background-color: #bdc3c7; // Grey out the button
+    cursor: not-allowed;
+  }
+}

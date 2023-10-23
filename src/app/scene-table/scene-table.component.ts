@@ -3,13 +3,21 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import axios from 'axios';
 import { map, switchMap } from 'rxjs/operators';
+import { OpenaiService } from '../openai.service';
+import { firstValueFrom } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 interface Scene {
   id?: number;
   time: number;
   original_text: string;
   prompt: string;
-  img?: string;
+  gptPrompt?: string;
+  length?: number;
+  imageUrl?: string;
+}
+interface DalleResponse {
+  generatedText: string;
 }
 
 @Component({
@@ -18,8 +26,11 @@ interface Scene {
   styleUrls: ['./scene-table.component.scss'],
 })
 export class SceneTableComponent implements OnInit {
-  scenes$: Observable<Scene[]> = new Observable<Scene[]>();
-  API_KEY = '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';
+  // clicked = false;
+  scenes$ = new BehaviorSubject<Scene[]>([]);
+  scenesObservable$ = this.scenes$.asObservable();
+
+  API_KEY = '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';
   apiUrl = 'assets/scenes.json';
   editableSceneId: number | null = null;
   editableScene: Partial<Scene> = {};
@@ -27,26 +38,47 @@ export class SceneTableComponent implements OnInit {
   newScene: Partial<Scene> = {};
   pasteScenes: string = '';
   generatedText: string = '';
+  picsLengthArray: number[] = [];
 
-  constructor(private http: HttpClient) {
-    this.scenes$ = this.http.get<Scene[]>('./assets/scenes.json');
+  constructor(private http: HttpClient, private openaiService: OpenaiService) {
+    // this.scenes$ = this.http.get<Scene[]>('./assets/scenes.json');
     // sub to scenes$ and log them
   }
 
   ngOnInit(): void {
     // this.getScenes();
-    this.scenes$.subscribe((data) => {
-      console.log(data);
-      if (data.length > 0) {
-        this.makeApiRequest(data[0].original_text).then(
-          (generatedText: any) => {
-            this.generatedText = generatedText;
-            console.log(generatedText);
-          }
-        );
-      }
+    const totalLength = 0;
+    const loadedScenes = this.loadScenesFromLocalStorage();
+    if (loadedScenes) {
+      this.scenes$.next(loadedScenes); // Update the BehaviorSubject with the scenes from local storage
+    } else {
+      // If there are no scenes in local storage, fetch from the JSON file
+      console.log('Got scenes from json');
+      this.http.get<Scene[]>('./assets/scenes.json').subscribe((data) => {
+        this.scenes$.next(data);
+      });
+    }
+    this.scenes$.subscribe((data: Scene[]) => {
+      let totalLength = 0;
+
+      data.forEach((scene: Scene) => {
+        scene.length = scene.original_text.length * 0.066;
+        // generate all gpt Prompts
+        // this.generateGptPrompt(scene);
+
+        if (!scene.gptPrompt || scene.gptPrompt.trim().length === 0) {
+          this.generateGptPrompt(scene);
+        }
+
+        this.picsLengthArray.push(scene.original_text.length * 0.066);
+        totalLength += scene.original_text.length;
+      });
+      console.log(this.picsLengthArray);
+      let averageLength = totalLength / data.length;
+      console.log(`Average length of a scene: ${0.066 * averageLength}`);
+      this.saveScenesToLocalStorage(data);
     });
-    this.scenes$ = this.http.get<Scene[]>('./assets/scenes.json');
+    // this.scenes$ = this.http.get<Scene[]>('./assets/scenes.json');
 
     // Function to calculate the average length of 'original_text'
     const averageOriginalTextLength$ = this.scenes$.pipe(
@@ -77,129 +109,48 @@ export class SceneTableComponent implements OnInit {
 
     // Usage
     getAboveAverageScenes(1.2).subscribe((scenes) => {
-      console.log(scenes); // Logs all scenes where 'original_text' length is 20% above average
+      // console.log(scenes); // Logs all scenes where 'original_text' length is 20% above average
     });
   }
 
-  getScenes() {
-    const fileUrl = 'assets/data.txt';
+  generateGptPrompt(scene: Scene): void {
+    this.openaiService
+      .getGPTResponseTwo(scene.original_text)
+      .subscribe((gptPrompt: string) => {
+        scene.gptPrompt = gptPrompt;
+        console.log(gptPrompt);
 
-    this.http.get(fileUrl, { responseType: 'text' }).subscribe((data) => {
-      const scenes: Scene[] = [];
-
-      const lines = data.split('====');
-      for (const line of lines) {
-        const trimmedLine = line.trim();
-        if (trimmedLine) {
-          const timeMatch = trimmedLine.match(/Time: (\d+):/);
-          const originalTextMatch = trimmedLine.match(
-            /Find a subject\(s\) and activity in this text:\n(.+)/s
-          );
-          const promptMatch = trimmedLine.match(
-            /Now use that subject\(s\) and activity to make a prompt\n(.+)/s
-          );
-
-          if (timeMatch && originalTextMatch && promptMatch) {
-            const time = parseInt(timeMatch[1], 10);
-            const originalText = originalTextMatch[1].trim();
-            const prompt = promptMatch[1].trim();
-
-            scenes.push({
-              time,
-              original_text: originalText,
-              prompt,
-            });
-          }
-        }
-      }
-
-      this.scenes$ = new Observable<Scene[]>((subscriber) => {
-        subscriber.next(scenes);
-        subscriber.complete();
-      });
-    });
-  }
-
-  getScenesFromJSON() {
-    this.http.get<Scene[]>('./assets/scenes.json').subscribe((data) => {
-      console.log(data);
-    });
-  }
-
-  generatePrompt(): void {
-    // Read the contents of the data.txt file
-    this.http
-      .get('assets/data.txt', { responseType: 'text' })
-      .subscribe((data: string) => {
-        // Split the file into scenes
-        const sceneEntries = data.split('====');
-
-        // Prepare an array to store the generated prompts
-        const generatedPrompts: string[] = [];
-
-        // Loop through the scene entries and make API requests for each scene
-        sceneEntries.forEach((sceneEntry) => {
-          // Extract the time, original text, and prompt
-          const timeMatch = sceneEntry.match(/Time: (\d+):/);
-          const originalTextMatch = sceneEntry.match(
-            /Find a subject\(s\) and activity in this text:\n([\s\S]+?)\nNow use that subject\(s\) and activity to make a prompt/
-          );
-
-          if (timeMatch && originalTextMatch) {
-            const time = parseInt(timeMatch[1], 10);
-            const originalText = originalTextMatch[1].trim();
-
-            // Prepare the prompt for the API request
-            const apiPrompt = `${time}: A detailed image of ${originalText}, --cam`;
-
-            // Make the API request to the OpenAI Davinci API
-            this.makeApiRequest(apiPrompt).then((generatedText) => {
-              // Store the generated prompt
-              generatedPrompts.push(generatedText);
-
-              // If all scenes have been processed, log the generated prompts
-              if (generatedPrompts.length === sceneEntries.length) {
-                console.log(generatedPrompts);
-                // Further processing with the generated prompts can be done here
-              }
-            });
-          }
+        firstValueFrom(this.scenes$).then((scenes: Scene[]) => {
+          this.saveScenes(scenes);
         });
       });
   }
-  generateText(): void {
-    const data = {
-      model: 'gpt-3.5-turbo',
-      messages: [
-        {
-          role: 'system',
-          content:
-            '[time] A detailed image of [subject] [doing something interesting] during [time of day], --cam',
-        },
-        {
-          role: 'user',
-          content:
-            "Find a subject(s) and activity in this text:\nThe unity of the Grecian Empire endured little longer than Alexander's lifetime.",
-        },
-      ],
-    };
+  saveScenes(scenes: Scene[]): void {
+    // const blob = new Blob([JSON.stringify(scenes, null, 2)], {
+    //   type: 'application/json',
+    // });
+    // const url = URL.createObjectURL(blob);
+    // const a = document.createElement('a');
+    // a.href = url;
+    // a.download = 'scenes.json';
+    // a.click();
+    // URL.revokeObjectURL(url);
 
-    const headers = {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${this.API_KEY}`,
-    };
-
-    axios
-      .post('https://api.openai.com/v1/chat/completions', data, { headers })
-      .then((response) => {
-        const generatedText = response.data.choices[0].message.content;
-        console.log(generatedText);
-        // Further processing with the generated text can be done here
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    localStorage.setItem('scenes', JSON.stringify(scenes));
   }
+
+  saveScenesToFile(scenes: Scene[]): void {
+    const blob = new Blob([JSON.stringify(scenes, null, 2)], {
+      type: 'application/json',
+    });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'scenes.json';
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
   copyPrompt(prompt: string): void {
     navigator.clipboard
       .writeText(prompt)
@@ -213,48 +164,49 @@ export class SceneTableComponent implements OnInit {
       });
   }
 
-  // generatePrompt(): void {
-  //   this.http.get<Scene[]>('./assets/scenes.json').subscribe((scenes) => {
-  //     const generatedPrompts: string[] = [];
+  // getScenes() {
+  //   const fileUrl = 'assets/data.txt';
 
-  //     scenes.forEach((scene) => {
-  //       const apiPrompt = `${scene.time}: A detailed image of ${scene.original_text}, --cam`;
-  //       this.makeApiRequest(apiPrompt).then((generatedText) => {
-  //         generatedPrompts.push(generatedText);
-  //         if (generatedPrompts.length === scenes.length) {
-  //           console.log(generatedPrompts);
-  //           // Further processing with the generated prompts can be done here
+  //   this.http.get(fileUrl, { responseType: 'text' }).subscribe((data) => {
+  //     const scenes: Scene[] = [];
+
+  //     const lines = data.split('====');
+  //     for (const line of lines) {
+  //       const trimmedLine = line.trim();
+  //       if (trimmedLine) {
+  //         const timeMatch = trimmedLine.match(/Time: (\d+):/);
+  //         const originalTextMatch = trimmedLine.match(
+  //           /Find a subject\(s\) and activity in this text:\n(.+)/s
+  //         );
+  //         const promptMatch = trimmedLine.match(
+  //           /Now use that subject\(s\) and activity to make a prompt\n(.+)/s
+  //         );
+
+  //         if (timeMatch && originalTextMatch && promptMatch) {
+  //           const time = parseInt(timeMatch[1], 10);
+  //           const originalText = originalTextMatch[1].trim();
+  //           const prompt = promptMatch[1].trim();
+
+  //           scenes.push({
+  //             time,
+  //             original_text: originalText,
+  //             prompt,
+  //           });
   //         }
-  //       });
+  //       }
+  //     }
+
+  //     this.scenes$ = new Observable<Scene[]>((subscriber) => {
+  //       subscriber.next(scenes);
+  //       subscriber.complete();
   //     });
   //   });
   // }
 
-  makeApiRequest(prompt: string): Promise<string> {
-    const apiKey = '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';
-    const apiUrl =
-      'https://api.openai.com/v1/engines/davinci-codex/completions';
-    const headers = {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${apiKey}`,
-    };
-    const data = {
-      prompt,
-      max_tokens: 512,
-      n: 1,
-      temperature: 0.5,
-    };
-
-    return this.http
-      .post(apiUrl, data, { headers })
-      .toPromise()
-      .then((response: any) => {
-        return response.choices[0].text;
-      })
-      .catch((error: any) => {
-        console.error(error);
-        return '';
-      });
+  getScenesFromJSON() {
+    this.http.get<Scene[]>('./assets/scenes.json').subscribe((data) => {
+      console.log(data);
+    });
   }
 
   addPastedScenes(pasteText: string) {
@@ -297,7 +249,7 @@ export class SceneTableComponent implements OnInit {
     }
 
     // this.scenes.push(...newScenes);
-    this.saveScenes();
+    // this.saveScenes();
   }
 
   createScene(scene: Partial<Scene>) {
@@ -308,34 +260,37 @@ export class SceneTableComponent implements OnInit {
       original_text: scene.original_text || '',
       prompt: scene.prompt || '',
     };
-    // this.scenes.push(newScene);
     this.newScene = {};
-    this.saveScenes();
   }
 
   updateScene(id: number, scene: Partial<Scene>) {
-    // const index = this.scenes.findIndex((s) => s.id === id);
-    // this.scenes[index] = {
-    //   ...this.scenes[index],
-    //   ...scene,
-    // };
-    this.saveScenes();
+    firstValueFrom(this.scenes$).then((scenes: Scene[]) => {
+      const index = scenes.findIndex((s) => s.id === id);
+      scenes[index] = {
+        ...scenes[index],
+        ...scene,
+      };
+      this.saveScenes(scenes);
+    });
+  }
+  // In your SceneTableComponent
+
+  onSaveClick(): void {
+    // firstValueFrom(this.scenes$).then((scenes) => this.saveScenes(scenes));
   }
 
-  deleteScene(id: number) {
-    // this.scenes = this.scenes.filter((scene) => scene.id !== id);
-    this.saveScenes();
+  saveScenesToLocalStorage(scenes: Scene[]): void {
+    localStorage.setItem('scenes', JSON.stringify(scenes));
   }
 
-  private saveScenes() {
-    // localStorage.setItem('scenes', JSON.stringify(this.scenes));
+  loadScenesFromLocalStorage(): Scene[] | null {
+    const scenesString = localStorage.getItem('scenes');
+    if (scenesString) {
+      return JSON.parse(scenesString);
+    }
+    return null;
   }
 
-  editScene(scene: Scene) {
-    //this.editableSceneId = scene.id;
-    this.editableScene = { ...scene };
-    this.saveScenes();
-  }
   cancelEdit(): void {
     this.editableSceneId = null;
   }
