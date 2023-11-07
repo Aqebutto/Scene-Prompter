@@ -115,6 +115,27 @@ export class OpenaiService {
       .pipe(map((x) => x.choices[0].message.content));
   }
 
+  downloadImage(imageUrl: string, fileName: string): void {
+    // Create an anchor element
+    const anchor = document.createElement('a');
+    anchor.style.display = 'none'; // Hide the anchor element
+
+    // Set the href attribute to the image URL
+    anchor.href = imageUrl;
+
+    // Set the download attribute with the desired file name
+    anchor.download = fileName;
+
+    // Append the anchor element to the DOM
+    document.body.appendChild(anchor);
+
+    // Simulate a click on the anchor element to initiate the download
+    anchor.click();
+
+    // Remove the anchor element from the DOM
+    document.body.removeChild(anchor);
+  }
+
   generateImage(prompt: string, numImages: number) {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
@@ -144,6 +165,32 @@ export class OpenaiService {
         map((response) => response.data.map((image) => image.url)) // Extracting the URLs of the generated images
       );
   }
+  // generateImage(prompt: string, numImages: number) {
+  //   const proxyUrl = 'http://localhost:8080/'; // Replace with the actual URL of your CORS proxy server
+  //   const apiUrl = 'https://api.openai.com/v1/images/generations'; // The original API URL
+
+  //   const headers = new HttpHeaders({
+  //     'Content-Type': 'application/json',
+  //     Authorization: `Bearer ${this.openaiKey}`,
+  //   });
+
+  //   // Ensure that 'numImages' complies with the allowed range for DALL-E-3 (currently 1)
+  //   numImages = Math.min(Math.max(numImages, 1), 1);
+
+  //   const body = {
+  //     model: 'dall-e-3',
+  //     prompt: prompt,
+  //     n: numImages,
+  //     size: '1792x1024',
+  //   };
+
+  //   // Make the request through the proxy
+  //   return this.http
+  //     .post<{ data: { id: string; url: string }[] }>(proxyUrl + apiUrl, body, {
+  //       headers,
+  //     })
+  //     .pipe(map((response) => response.data.map((image) => image.url)));
+  // }
 
   getDalleResponse(title: string) {
     return this.http

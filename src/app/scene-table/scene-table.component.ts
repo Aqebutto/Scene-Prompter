@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import axios from 'axios';
+import { Observable, forkJoin } from 'rxjs';
+// import axios from 'axios';
 import { map, switchMap } from 'rxjs/operators';
 import { OpenaiService } from '../openai.service';
 import { firstValueFrom } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
+import { concatMap, delay } from 'rxjs/operators';
+import { CorsProxyService } from '../cors-proxy.service';
 
 interface Scene {
   id?: number;
@@ -29,6 +31,7 @@ interface DalleResponse {
 })
 export class SceneTableComponent implements OnInit {
   // clicked = false;
+  doAllImages = false;
   scenes$ = new BehaviorSubject<Scene[]>([]);
   scenesObservable$ = this.scenes$.asObservable();
 
@@ -42,7 +45,11 @@ export class SceneTableComponent implements OnInit {
   generatedText: string = '';
   picsLengthArray: number[] = [];
 
-  constructor(private http: HttpClient, private openaiService: OpenaiService) {
+  constructor(
+    private http: HttpClient,
+    private openaiService: OpenaiService,
+    private corsProxyService: CorsProxyService
+  ) {
     // this.scenes$ = this.http.get<Scene[]>('./assets/scenes.json');
     // sub to scenes$ and log them
   }
@@ -52,9 +59,14 @@ export class SceneTableComponent implements OnInit {
     const totalLength = 0;
     const loadedScenes = this.loadScenesFromLocalStorage();
     console.log('Got scenes from json');
-    this.http.get<Scene[]>('./assets/scenes.json').subscribe((data) => {
-      this.scenes$.next(data);
-    });
+    this.http
+      .get<Scene[]>('./assets/scenes.json')
+      .subscribe((data: Scene[]) => {
+        this.scenes$.next(data);
+        // if (this.doAllImages) {
+        //   this.generateGptImages(data);
+        // }
+      });
     // if (loadedScenes) {
     //   this.scenes$.next(loadedScenes); // Update the BehaviorSubject with the scenes from local storage
     // } else {
@@ -147,6 +159,7 @@ export class SceneTableComponent implements OnInit {
 
       // Update the BehaviorSubject with the new scene data
       const updatedScenes = this.scenes$.getValue().map((sc) => {
+        console.log(sc.imageUrl);
         if (sc === scene) {
           // Find the scene to update (you could also match by an ID if available)
           return { ...sc, imageUrl: scene.imageUrl };
@@ -156,6 +169,75 @@ export class SceneTableComponent implements OnInit {
 
       this.scenes$.next(updatedScenes); // Emit the updated scenes
     });
+  }
+  // generateGptImage(scene: Scene): void {
+  //   this.openaiService.generateImage(scene.prompt, 1).subscribe((urls) => {
+  //     const imageUrl = urls[0]; // Since we're only generating one image
+
+  //     // Fetch the image through the proxy server
+  //     this.corsProxyService
+  //       .fetchImage(imageUrl)
+  //       .then((blob) => {
+  //         // Handle the blob or create a download link as needed
+  //         const url = URL.createObjectURL(blob);
+
+  //         // Update the scene with the proxy image URL
+  //         scene.imageUrl = url;
+
+  //         // Update the BehaviorSubject with the new scene data
+  //         const updatedScenes = this.scenes$.getValue().map((sc) => {
+  //           if (sc === scene) {
+  //             // Find the scene to update (you could also match by an ID if available)
+  //             return { ...sc, imageUrl: scene.imageUrl };
+  //           }
+  //           return sc;
+  //         });
+
+  //         this.scenes$.next(updatedScenes); // Emit the updated scenes
+  //       })
+  //       .catch((error) => {
+  //         console.error('Failed to fetch image:', error);
+  //         // Handle errors if necessary
+  //       });
+  //   });
+  // }
+
+  generateGptImages(scenes: Scene[]): void {
+    // Create an array to store observables for all scene image generation requests
+    const imageGenerationObservables = scenes.map((scene) =>
+      this.openaiService.generateImage(scene.prompt, 1).pipe(
+        // Introduce a delay of 1000 milliseconds (1 second) between requests
+        delay(7000)
+      )
+    );
+
+    // Use concatMap to process requests sequentially with a delay
+    this.scenesObservable$
+      .pipe(concatMap(() => forkJoin(imageGenerationObservables)))
+      .subscribe((imageUrlsArray) => {
+        scenes.forEach((scene, index) => {
+          const imageUrl = imageUrlsArray[index][0]; // Assuming we're generating one image
+          console.log(scene.time, +' ' + imageUrl);
+          scene.imageUrl = imageUrl;
+        });
+
+        // Emit the updated scenes
+        this.updateScenes(scenes);
+
+        // Now, you can also print the scenes with image URLs to the console
+        console.log('Scenes with Image URLs:');
+        scenes.forEach((scene, index) => {
+          console.log(`Scene ${index + 1}:`);
+          console.log('Prompt:', scene.prompt);
+          console.log('Image URL:', scene.imageUrl);
+          // Add more properties as needed
+        });
+      });
+  }
+
+  private updateScenes(scenes: Scene[]): void {
+    // Assuming you have a BehaviorSubject for scenes$
+    this.scenes$.next([...scenes]);
   }
 
   saveScenes(scenes: Scene[]): void {
@@ -326,5 +408,37 @@ export class SceneTableComponent implements OnInit {
 
   cancelEdit(): void {
     this.editableSceneId = null;
+  }
+  printScenesToConsole() {
+    this.scenes$.subscribe((scenes) => {
+      console.log('Scenes:');
+      scenes.forEach((scene, index) => {
+        console.log(`Scene ${index + 1}:`);
+        console.log('Prompt:', scene.prompt);
+        console.log('Image URL:', scene.imageUrl);
+        // Add more properties as needed
+      });
+    });
+  }
+
+  downloadImage(imageUrl: string, fileName: string): void {
+    // Create a request to fetch the image
+    fetch(imageUrl)
+      .then((response) => response.blob())
+      .then((blob) => {
+        // Create a Blob object from the response
+        const blobUrl = URL.createObjectURL(blob);
+
+        // Create an anchor element to trigger the download
+        const anchor = document.createElement('a');
+        anchor.href = blobUrl;
+        anchor.download = fileName;
+
+        // Programmatically trigger the click event on the anchor element
+        anchor.click();
+
+        // Clean up the temporary URL
+        URL.revokeObjectURL(blobUrl);
+      });
   }
 }
