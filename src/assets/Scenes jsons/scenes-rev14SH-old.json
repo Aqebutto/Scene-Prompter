@@ -1,0 +1,755 @@
+[
+  {
+    "time": 1,
+    "prompt": "A photograph of a serene valley, wildflowers in full bloom, where a group of travelers set up camp, sharing stories of prophetic dreams they've had recently. Taken on: Canon EOS R5, Valley photography, 28mm f/1.8 lens."
+  },
+  {
+    "time": 2,
+    "prompt": "A digital artwork of a medieval town square, bustling with activity, as a bard sings tales that mirror recent celestial events. Designed with: Corel Painter, vibrant color palette, detailed textures."
+  },
+  {
+    "time": 3,
+    "prompt": "An oil painting of a coastal village, waves crashing on the shore, where fishermen find strange symbols on their catch, resembling ancient scripts. Painted with: Oils, canvas texture, soft brushwork. Inspired by: Post-Impressionism."
+  },
+  {
+    "time": 4,
+    "prompt": "A photograph of a dense forest at dusk, fireflies illuminating the scene, as hikers share stories of visions that seem interconnected. Taken on: Nikon D850, Forest photography, 35mm f/1.4 lens."
+  },
+  {
+    "time": 5,
+    "prompt": "A digital render of a bustling port at sunset, ships coming and going, as sailors discuss patterns in the stars that align with old sea tales. Created with: Blender, dynamic lighting, realistic textures."
+  },
+  {
+    "time": 6,
+    "prompt": "A watercolor painting of a mountaintop temple, monks deep in meditation, receiving visions that correspond with sacred texts. Painted with: Watercolors, textured paper, layered washes. Influenced by: Orientalism."
+  },
+  {
+    "time": 7,
+    "prompt": "A photograph of a remote desert oasis at night, stars shimmering in the sky, revealing mysterious inscriptions in the sands. Taken on: Sony A7R IV, Night desert photography, 50mm f/2 lens."
+  },
+  {
+    "time": 8,
+    "prompt": "A photograph of a vast canyon, eagles soaring in the sky, where male angels descend to proclaim a vital message. The landscape resonates with their words. Taken on: Canon EOS R5, Canyon photography, 24mm f/1.8 lens."
+  },
+  {
+    "time": 9,
+    "prompt": "A digital illustration of a bustling American city, skyscrapers towering high, as male angels appear, warning the inhabitants of the looming darkness. Drawn with: Corel Painter, urban color palette, dynamic perspectives."
+  },
+  {
+    "time": 10,
+    "prompt": "An oil painting of a grand cathedral, worshippers gathering, unaware of the beastly shadow lurking behind. Male angels strive to unveil the truth. Painted with: Oils, canvas texture, chiaroscuro technique. Inspired by: Baroque art."
+  },
+  {
+    "time": 11,
+    "prompt": "A photograph of a serene American prairie, wild horses galloping, as male angels sound trumpets of impending changes. Taken on: Nikon D850, Prairie photography, 35mm f/1.4 lens."
+  },
+  {
+    "time": 12,
+    "prompt": "A digital render of the Papal palace, adorned in splendor, but beneath lies a beastly foundation. Male angels attempt to expose the facade. Created with: Blender, detailed textures, dramatic lighting."
+  },
+  {
+    "time": 13,
+    "prompt": "A watercolor painting of an American harbor, ships anchored, as male angels fly overhead, their reflections revealing the beast's form. Painted with: Watercolors, textured paper, fluid strokes. Influenced by: Impressionism."
+  },
+  {
+    "time": 14,
+    "prompt": "A photograph of a bustling papal procession, crowds cheering, but male angels hover, revealing cryptic symbols in the sky. Taken on: Sony A7R IV, Event photography, 50mm f/2 lens."
+  },
+  {
+    "time": 15,
+    "prompt": "A digital illustration of a vibrant American festival, fireworks lighting the sky, where male angels weave between the celebrations, cautioning of the dual beasts. Designed with: Adobe Illustrator, vibrant colors, layered compositions."
+  },
+  {
+    "time": 16,
+    "prompt": "An oil painting of an ancient American settlement, pioneers building their homes, as male angels warn of the beastly influence to come. Painted with: Acrylics, wood panel, detailed brushwork. Inspired by: American frontier art."
+  },
+  {
+    "time": 17,
+    "prompt": "A photograph of the papal enclave, cardinals in deep discussion, but the shadows form the beastly figure, with male angels observing from afar. Taken on: Leica SL2, Architectural photography, 28mm f/1.7 lens."
+  },
+  {
+    "time": 18,
+    "prompt": "A digital render of a futuristic American cityscape, technological wonders abound, but male angels project holograms of ancient prophecies, hinting at the beasts. Created with: Autodesk 3ds Max, neon aesthetics, detailed shaders."
+  },
+  {
+    "time": 19,
+    "prompt": "A watercolor painting of an American valley, bison grazing, as male angels stand tall, their presence a stark contrast to the beastly shadows. Painted with: Watercolors, cold press paper, sweeping strokes. Influenced by: Hudson River School."
+  },
+  {
+    "time": 20,
+    "prompt": "A photograph of a papal conclave, sacred rituals underway, but male angels pierce the scene, their radiance highlighting the beastly undertones. Taken on: Fujifilm GFX 100, Documentary photography, 23mm f/4 lens."
+  },
+  {
+    "time": 21,
+    "prompt": "A digital illustration of an American national park, nature in all its glory, but male angels descend, their songs revealing the hidden beastly narratives. Drawn with: Affinity Designer, natural hues, intricate details."
+  },
+  {
+    "time": 22,
+    "prompt": "An oil painting of a papal cathedral, grandeur on display, but the male angels in the foreground bring forth the truth of the lurking beast. Painted with: Oils, linen canvas, expressive brushwork. Inspired by: Gothic revival."
+  },
+  {
+    "time": 23,
+    "prompt": "A photograph of an American town hall, leaders debating, while male angels on the periphery bring forth scrolls with prophecies of the beasts. Taken on: Panasonic Lumix S1R, Interior photography, 28mm f/1.7 lens."
+  },
+  {
+    "time": 24,
+    "prompt": "A digital render of a papal library, ancient tomes lining the shelves, but the male angels present unveil manuscripts that hint at the beastly past. Created with: ZBrush, ambient lighting, realistic textures."
+  },
+  {
+    "time": 25,
+    "prompt": "A watercolor painting of an American homestead, families uniting under a vast, starry sky. The male angels hovering above them connect the stars with their hands, forming constellations that seem to depict tales and warnings of the beasts. The scene blends the tranquility of family gatherings with the profound messages from the heavens. Painted with: Watercolors on parchment paper, utilizing soft washes to convey the nighttime atmosphere and delicate brushwork for the details of the constellations and angels. Inspired by: Romanticism."
+  },
+  {
+    "time": 26,
+    "prompt": "A photograph of an old American church, its spire reaching towards the cloudy skies, while male angels circulate, their whispers echoing tales of ancient prophecies. Taken on: Olympus OM-D E-M1X, Architectural photography, 32mm f/1.9 lens."
+  },
+  {
+    "time": 27,
+    "prompt": "A digital illustration of a papal museum, artifacts and relics displayed, but male angels hover, their gaze fixated on particular items that have beastly connections. Designed with: Clip Studio Paint, muted color palette, sharp contrasts."
+  },
+  {
+    "time": 28,
+    "prompt": "An oil painting of an American cornfield, golden crops swaying, while male angels walk between the rows, discussing the significance of the land and its beastly ties. Painted with: Acrylics, canvas board, layered technique. Inspired by: Regionalism."
+  },
+  {
+    "time": 29,
+    "prompt": "A photograph of the interiors of a papal chamber, ornate decorations illuminating the room, as male angels silently observe, their presence juxtaposed against the grandeur. Taken on: Hasselblad X1D II 50C, Indoor photography, 45mm f/3.5 lens."
+  },
+  {
+    "time": 30,
+    "prompt": "A digital render of an American city during the Great Depression, streets filled with hope and despair, while male angels offer solace and share prophecies. Created with: Cinema 4D, grayscale aesthetics, detailed modeling."
+  },
+  {
+    "time": 31,
+    "prompt": "A watercolor painting of a papal garden, blooming with roses and lilies, as male angels converse with the flora, seeking answers about the beastly legends. Painted with: Watercolors, textured paper, wet-on-wet technique. Influenced by: Art Nouveau."
+  },
+  {
+    "time": 32,
+    "prompt": "A photograph of an American diner in the 1950s, jukebox playing, as male angels seated at the counter discuss the nation's path and its alignment with prophecies. Taken on: Pentax 645Z, Vintage photography, 55mm f/2.8 lens."
+  },
+  {
+    "time": 33,
+    "prompt": "A digital illustration of a papal procession during medieval times, clergy in elaborate robes, while male angels blend with the crowd, subtly revealing truths. Drawn with: Procreate, aged color tones, soft shading."
+  },
+  {
+    "time": 34,
+    "prompt": "An oil painting of an American beach during the 1920s, families enjoying the sun and sea, as male angels mingle, sharing whispers of the nation's beastly ties. Painted with: Oils, stretched canvas, impasto technique. Inspired by: Fauvism."
+  },
+  {
+    "time": 35,
+    "prompt": "A photograph of the papal archives, manuscripts stacked high, while male angels sift through the texts, searching for connections to the beasts. Taken on: Fujifilm GFX 50S, Document photography, 63mm f/2.8 lens."
+  },
+  {
+    "time": 36,
+    "prompt": "A digital render of an American farm during the Civil War era, tensions palpable, as male angels mediate, sharing messages of peace and prophecies. Created with: Maya, earthy color palette, dynamic lighting."
+  },
+  {
+    "time": 37,
+    "prompt": "A watercolor painting of a papal audience, the Pope addressing the masses, with male angels floating above, their expressions revealing hidden truths. Painted with: Watercolors, vellum paper, gradient washes. Influenced by: Rococo."
+  },
+  {
+    "time": 38,
+    "prompt": "A photograph of an American jazz club in the 1930s, music filling the air, as male angels play instruments, their melodies telling tales of prophecies. Taken on: Leica M10, Low-light photography, 35mm f/1.4 lens."
+  },
+  {
+    "time": 39,
+    "prompt": "A digital illustration of a papal council, decisions being made, while male angels stand witness, their presence a reminder of the beastly prophecies. Designed with: Krita, regal color palette, intricate detailing."
+  },
+  {
+    "time": 40,
+    "prompt": "An oil painting of an American frontier, settlers forging ahead, as male angels guide them, sharing visions of the nation's destiny and its ties to the beasts. Painted with: Acrylics, wood panel, brushwork. Inspired by: Luminism."
+  },
+  {
+    "time": 41,
+    "prompt": "A photograph of the interiors of a papal treasury, gold and jewels glittering, while male angels reflect on the wealth's connection to ancient prophecies. Taken on: Nikon D6, Treasure photography, 28mm f/1.8 lens."
+  },
+  {
+    "time": 42,
+    "prompt": "A digital render of an American factory during the Industrial Revolution, smokestacks billowing, as male angels observe the progress and its alignment with prophecies. Created with: Houdini, monochromatic tones, detailed modeling."
+  },
+  {
+    "time": 43,
+    "prompt": "A watercolor painting of a papal coronation, crowds cheering, as male angels float above, their countenances revealing the weight of prophecies. Painted with: Watercolors, textured paper, fluid strokes. Influenced by: Symbolism."
+  },
+  {
+    "time": 44,
+    "prompt": "A photograph of an American baseball game in the early 20th century, teams competing, while male angels cheer from the stands, their discussions centered on prophecies. Taken on: Canon EOS-1D X Mark III, Sports photography, 70mm f/2.8 lens."
+  },
+  {
+    "time": 45,
+    "prompt": "A digital illustration of a papal debate, theologians in deep thought, while male angels interject with divine insights on the beasts and prophecies. Drawn with: CorelDRAW, warm color tones, layered compositions."
+  },
+  {
+    "time": 46,
+    "prompt": "An oil painting of an American carnival in the 1890s, rides spinning, as male angels join the festivities, their interactions revealing glimpses of prophecies. Painted with: Oils, canvas board, vibrant brushwork. Inspired by: Post-Impressionism."
+  },
+  {
+    "time": 47,
+    "prompt": "A photograph of a grand American library, scholars engrossed in ancient texts, while male angels guide their research, revealing hidden prophetic connections. Taken on: Panasonic Lumix GH5, Interior photography, 25mm f/1.7 lens."
+  },
+  {
+    "time": 48,
+    "prompt": "A digital illustration of a papal feast, attendees reveling in luxury, but male angels move among them, subtly reminding them of forgotten prophecies. Designed with: CorelDRAW, rich color tones, detailed patterns."
+  },
+  {
+    "time": 49,
+    "prompt": "An oil painting of an American fair during the Roaring Twenties, people dancing, while male angels join in, their movements telling stories of future prophecies. Painted with: Acrylics, canvas board, lively brushwork. Inspired by: Art Deco."
+  },
+  {
+    "time": 50,
+    "prompt": "A photograph of the papal gardens, lush greenery, as male angels meditate, their reflections on the waters revealing the beasts. Taken on: Olympus OM-D E-M5 Mark III, Nature photography, 17mm f/1.2 lens."
+  },
+  {
+    "time": 51,
+    "prompt": "A digital render of an American theater in the 1940s, actors performing, while male angels watch from the balcony, their whispers discussing the play's alignment with prophecies. Created with: ZBrush, vintage color palette, realistic lighting."
+  },
+  {
+    "time": 52,
+    "prompt": "A watercolor painting of a papal library, dusty tomes and scrolls, as male angels discover manuscripts that hint at the beasts. Painted with: Watercolors, fine-grain paper, delicate strokes. Influenced by: Renaissance art."
+  },
+  {
+    "time": 53,
+    "prompt": "A photograph of an American railway station in the 1910s, steam engines roaring, while male angels converse with travelers, sharing insights on national prophecies. Taken on: Fujifilm X-H1, Historical photography, 23mm f/2 lens."
+  },
+  {
+    "time": 54,
+    "prompt": "A digital illustration of a papal ballroom, guests waltzing, while male angels play celestial music, its notes revealing truths about the beasts. Designed with: Affinity Designer, opulent color palette, flowing patterns."
+  },
+  {
+    "time": 55,
+    "prompt": "An oil painting of an American campsite during the Gold Rush, prospectors hopeful, as male angels sit by the fireside, recounting prophecies of wealth and beasts. Painted with: Oils, rough canvas, textured brushwork. Inspired by: American realism."
+  },
+  {
+    "time": 56,
+    "prompt": "A photograph of the papal observatory, telescopes aimed at the stars, while male angels guide the astronomers to celestial signs of prophecies. Taken on: Nikon Z6, Astrophotography, 20mm f/1.8 lens."
+  },
+  {
+    "time": 57,
+    "prompt": "A digital render of an American speakeasy during Prohibition, jazz music playing, while male angels share tales of prophecies over drinks. Created with: Cinema 4D, moody color tones, detailed modeling."
+  },
+  {
+    "time": 58,
+    "prompt": "A watercolor painting of a papal procession through a village, children and adults greeting the clergy, as male angels weave through the crowd, whispers of prophecies in the air. Painted with: Watercolors, rough paper, fluid technique. Influenced by: Folk art."
+  },
+  {
+    "time": 59,
+    "prompt": "A photograph of an American rodeo in the 1950s, cowboys showcasing their skills, while male angels ride alongside, their presence a reminder of the nation's prophetic destiny. Taken on: Canon EOS-1D X Mark II, Action photography, 70mm f/2.8 lens."
+  },
+  {
+    "time": 60,
+    "prompt": "A digital illustration of a papal conference, leaders from different nations, as male angels stand sentinel, ensuring the prophecies are not forgotten. Drawn with: Procreate, muted color tones, detailed shadows."
+  },
+  {
+    "time": 61,
+    "prompt": "An oil painting of an American beach during the 1960s, surfers riding waves, while male angels surf alongside, sharing messages of the sea's prophetic tales. Painted with: Acrylics, canvas board, vibrant brushwork. Inspired by: Pop art."
+  },
+  {
+    "time": 62,
+    "prompt": "A photograph of the papal chambers during prayer, incense filling the air, as male angels join in, their prayers echoing prophecies of old. Taken on: Leica M10-R, Spiritual photography, 28mm f/1.4 lens."
+  },
+  {
+    "time": 63,
+    "prompt": "A digital render of an American jazz club in the 1920s, saxophones and trumpets setting the mood, while male angels play ethereal tunes that hint at prophecies. Created with: Blender, sepia tones, detailed models and textures."
+  },
+  {
+    "time": 64,
+    "prompt": "A watercolor painting of a papal courtyard, birds chirping and fountains glistening, as male angels converse with cardinals, discussing the ancient prophecies. Painted with: Watercolors, cold press paper, light washes. Influenced by: Neoclassicism."
+  },
+  {
+    "time": 65,
+    "prompt": "A photograph of an American farm during the Great Depression, families persevering through hardships, while male angels offer solace and share hopeful prophecies. Taken on: Sony A7R IV, Rural photography, 35mm f/2.8 lens."
+  },
+  {
+    "time": 66,
+    "prompt": "A digital illustration of a papal library, scholars pouring over texts, while male angels bring forth ancient scrolls that illuminate hidden prophecies. Designed with: Adobe Illustrator, warm hues, intricate linework."
+  },
+  {
+    "time": 67,
+    "prompt": "An oil painting of an American cityscape during the Civil Rights Movement, protesters marching, while male angels march in solidarity, reminding all of unity and prophecies of peace. Painted with: Oils, canvas texture, expressive brushwork. Inspired by: Social Realism."
+  },
+  {
+    "time": 68,
+    "prompt": "A photograph of the papal gardens at twilight, the horizon painted in shades of purple and gold, while male angels meditate, drawing connections between nature and prophecies. Taken on: Panasonic Lumix GH5S, Twilight photography, 25mm f/1.7 lens."
+  },
+  {
+    "time": 69,
+    "prompt": "A digital render of an American diner in the 1950s, families enjoying a meal, while male angels serve dishes that evoke memories and tales of prophecies. Created with: ZBrush, vintage color palette, ambient lighting."
+  },
+  {
+    "time": 70,
+    "prompt": "A watercolor painting of a papal audience in the Vatican, the crowd in awe, while male angels float above, their auras illuminating hidden truths of prophecies. Painted with: Watercolors, vellum paper, wet-on-dry technique. Influenced by: Italian Renaissance."
+  },
+  {
+    "time": 71,
+    "prompt": "A photograph of an American baseball game in the 1940s, players giving their all, while male angels coach from the sidelines, their strategies inspired by ancient prophecies. Taken on: Nikon D780, Sports photography, 55mm f/2 lens."
+  },
+  {
+    "time": 88,
+    "prompt": "A photograph of an American forest during autumn, leaves falling, while male angels wander, their presence evoking prophecies related to seasons and cycles. Taken on: Leica SL2, Nature photography, 40mm f/2 lens."
+  },
+  {
+    "time": 89,
+    "prompt": "A digital illustration of a papal labyrinth, intricate pathways and mysteries, while male angels guide seekers, revealing truths of ancient prophecies. Designed with: Adobe Illustrator, monochromatic palette, intricate patterns."
+  },
+  {
+    "time": 90,
+    "prompt": "An oil painting of an American river during the Gold Rush, prospectors panning, while male angels sift the waters, unveiling prophecies in the shimmering reflections. Painted with: Oils, rough canvas, fluid brushwork. Inspired by: Romanticism."
+  },
+  {
+    "time": 91,
+    "prompt": "A watercolor painting of a papal choir, voices harmonizing in a cathedral, as male angels join, their songs echoing prophecies of unity and hope. Painted with: Watercolors, vellum paper, layered washes. Influenced by: Gothic art."
+  },
+  {
+    "time": 108,
+    "prompt": "An oil painting of an American town square during the Great Awakening, people gathering in fervent prayer, while male angels mingle among them, whispering divine prophecies. Painted with: Oils, linen canvas, vivid colors. Inspired by: Romanticism."
+  },
+  {
+    "time": 109,
+    "prompt": "A photograph of a papal library, ancient manuscripts lining the shelves, while male angels peruse the texts, aligning historical documents with biblical prophecies. Taken on: Canon EOS R5, Architectural photography, 35mm f/1.4 lens."
+  },
+  {
+    "time": 110,
+    "prompt": "A digital render of an American courtroom in the 20th century, judges deliberating, while male angels observe, ensuring justice aligns with prophetic principles. Created with: Blender, realistic lighting, attention to period-accurate details."
+  },
+  {
+    "time": 111,
+    "prompt": "An oil painting of a papal procession, clergy in ornate vestments, while male angels hover above, scrutinizing their actions against the backdrop of prophecy. Painted with: Oils, canvas, rich textures. Influenced by: Baroque art."
+  },
+  {
+    "time": 112,
+    "prompt": "A photograph of an American schoolhouse in the 19th century, children eagerly learning, while male angels contribute, integrating prophetic wisdom into the curriculum. Taken on: Nikon D850, Vintage photography, 50mm f/1.8 lens."
+  },
+  {
+    "time": 113,
+    "prompt": "A digital illustration of a papal audience, thousands gathered in St. Peter's Square, while male angels watch from above, their presence a silent testimony to the unfolding of prophecy. Designed with: Adobe Photoshop, ethereal glows, panoramic view."
+  },
+  {
+    "time": 114,
+    "prompt": "An oil painting of an American farm during the Dust Bowl, resilience in the face of adversity, while male angels bring rains, fulfilling prophecies of restoration. Painted with: Acrylics, textured canvas, muted palette. Inspired by: American Regionalism."
+  },
+  {
+    "time": 115,
+    "prompt": "A photograph of a papal enclave, cardinals in conclave, while male angels stand guard, their whispers of prophecy guiding the selection. Taken on: Sony A7III, Documentary photography, 85mm f/1.4 lens."
+  },
+  {
+    "time": 116,
+    "prompt": "A digital render of an American jazz club in the Roaring Twenties, music filling the air, while male angels play alongside, their melodies a harmonious prophecy. Created with: Cinema 4D, vibrant atmospheres, dynamic lighting."
+  },
+  {
+    "time": 117,
+    "prompt": "An oil painting of a papal balcony, the Pope addressing the crowd, while male angels ensure his words carry the weight of prophecy. Painted with: Oils, gessoed panel, fine details. Influenced by: Renaissance art."
+  },
+  {
+    "time": 118,
+    "prompt": "A photograph of an American space shuttle launch, humanity reaching for the stars, while male angels observe, their presence a nod to prophecies of exploration. Taken on: Canon EOS-1D X Mark III, Aerial photography, 70-200mm f/2.8 lens."
+  },
+  {
+    "time": 119,
+    "prompt": "A digital illustration of a papal council, decisions being made, while male angels influence, ensuring prophecies are not forgotten. Drawn with: Corel Painter, ethereal effects, detailed robes."
+  },
+  {
+    "time": 120,
+    "prompt": "An oil painting of an American civil rights march, people demanding equality, while male angels march alongside, their participation a fulfillment of prophetic justice. Painted with: Acrylics, canvas, bold strokes. Inspired by: Social Realism."
+  },
+  {
+    "time": 121,
+    "prompt": "A photograph of a papal garden, flowers in bloom, while male angels tend to the plants, their care a metaphor for nurturing prophecies. Taken on: Nikon Z6, Macro photography, 105mm f/2.8 lens."
+  },
+  {
+    "time": 122,
+    "prompt": "A digital render of an American diner in the 1950s, patrons enjoying a meal, while male angels serve, their service a gesture of prophetic hospitality. Created with: Autodesk Maya, retro vibes, detailed textures."
+  },
+  {
+    "time": 123,
+    "prompt": "An oil painting of a papal feast, clergy indulging, while male angels watch, their stern gaze a reminder of prophecies of moderation. Painted with: Oils, canvas, rich colors. Influenced by: Mannerism."
+  },
+  {
+    "time": 124,
+    "prompt": "A photograph of an American military base, soldiers preparing for duty, while male angels bless, their protection a manifestation of prophetic guardianship. Taken on: Sony Alpha 1, Military photography, 24-70mm f/2.8 lens."
+  },
+  {
+    "time": 125,
+    "prompt": "A digital illustration of a papal chapel, silent prayers echoing, while male angels join in, their prayers a chorus of prophetic intercession. Designed with: Adobe Illustrator, serene ambiance, soft lights."
+  },
+  {
+    "time": 125,
+    "prompt": "A digital illustration of a papal chapel, silent prayers echoing, while male angels join in, their prayers a chorus of prophetic intercession. Designed with: Adobe Illustrator, serene ambiance, soft lights."
+  },
+  {
+    "time": 126,
+    "prompt": "An oil painting of an American farm, a family giving thanks before a meal, while male angels observe, their presence a blessing of prophetic abundance. Painted with: Acrylics, canvas board, warm tones. Inspired by: Folk art."
+  },
+  {
+    "time": 127,
+    "prompt": "A photograph of a papal charity event, aid being distributed, while male angels help, their assistance a tangible act of prophetic love. Taken on: Canon EOS R, Event photography, 35mm f/1.4 lens."
+  },
+  {
+    "time": 128,
+    "prompt": "A digital render of an American city park, families enjoying a sunny day, while male angels play, their joy a reflection of prophetic happiness. Created with: Unreal Engine, realistic lighting, vibrant colors."
+  },
+  {
+    "time": 129,
+    "prompt": "An oil painting of a papal coronation, a new Pope being crowned, while male angels witness, their presence a seal of prophetic authority. Painted with: Oils, gilded frame, intricate details. Influenced by: Baroque art."
+  },
+  {
+    "time": 130,
+    "prompt": "A photograph of an American rodeo, cowboys in action, while male angels cheer, their enthusiasm a nod to prophecies of courage. Taken on: Nikon D6, Sports photography, 70-200mm f/2.8 lens."
+  },
+  {
+    "time": 131,
+    "prompt": "A digital illustration of a papal retreat, clergy in reflection, while male angels meditate alongside, their tranquility a manifestation of prophetic peace. Designed with: Adobe Photoshop, soft tones, peaceful setting."
+  },
+  {
+    "time": 132,
+    "prompt": "An oil painting of an American summer camp, children laughing and playing, while male angels join in, their presence a fulfillment of prophecies of joy. Painted with: Acrylics, canvas, lively colors. Inspired by: Impressionism."
+  },
+  {
+    "time": 133,
+    "prompt": "A digital render of a contemporary American newsroom, journalists diligently working on breaking stories, while male angels guide their pens, ensuring truth aligns with prophetic revelations. Created with: Blender, attention to modern details, realistic lighting."
+  },
+  {
+    "time": 134,
+    "prompt": "An oil painting of a medieval European castle, royalty discussing state matters, while male angels whisper wise counsel, their advice rooted in ancient prophecies. Painted with: Oils, linen canvas, rich color palette. Inspired by: Gothic art."
+  },
+  {
+    "time": 135,
+    "prompt": "A photograph of an American space observatory, astronomers peering into the cosmos, while male angels illuminate celestial bodies, highlighting prophetic signs in the stars. Taken on: Sony A7R IV, Astrophotography, 14mm f/2.8 lens."
+  },
+  {
+    "time": 136,
+    "prompt": "A digital illustration of a bustling American city during the holiday season, streets filled with shoppers, while male angels sprinkle blessings, fulfilling prophecies of joy and prosperity. Designed with: Adobe Illustrator, vibrant colors, festive atmosphere."
+  },
+  {
+    "time": 137,
+    "prompt": "An oil painting of a Renaissance European library, scholars immersed in ancient texts, while male angels contribute knowledge, ensuring prophecies are preserved. Painted with: Oils, canvas, meticulous attention to detail. Influenced by: Renaissance art."
+  },
+  {
+    "time": 138,
+    "prompt": "A photograph of an American firefighting team in action, bravely combating flames, while male angels provide protection, their presence a tangible manifestation of prophetic guardianship. Taken on: Canon EOS-1D X Mark II, Action photography, 24-70mm f/2.8 lens."
+  },
+  {
+    "time": 139,
+    "prompt": "A digital render of a modern American hospital, medical staff providing care, while male angels assist, ensuring healing aligns with prophetic promises. Created with: Autodesk 3ds Max, realistic textures, attention to medical details."
+  },
+  {
+    "time": 140,
+    "prompt": "An oil painting of a Baroque European palace, nobility hosting a grand ball, while male angels dance among them, their movements a graceful expression of prophetic celebration. Painted with: Oils, large canvas, dramatic lighting. Influenced by: Baroque art."
+  },
+  {
+    "time": 141,
+    "prompt": "A photograph of an American research laboratory, scientists conducting experiments, while male angels oversee, ensuring discoveries are in harmony with prophetic knowledge. Taken on: Nikon Z7, Macro photography, 105mm f/2.8 lens."
+  },
+  {
+    "time": 142,
+    "prompt": "A digital illustration of an American library, students studying diligently, while male angels share wisdom, their guidance a fulfillment of prophetic understanding. Designed with: Adobe Photoshop, warm lighting, quiet ambiance."
+  },
+  {
+    "time": 143,
+    "prompt": "An oil painting of a European cathedral during a solemn mass, the faithful in prayer, while male angels join in worship, their devotion a testament to the fulfillment of prophecy. Painted with: Oils, canvas, soft lighting. Influenced by: Gothic art."
+  },
+  {
+    "time": 144,
+    "prompt": "A photograph of an American military training facility, soldiers honing their skills, while male angels provide strength, their support a manifestation of prophetic valor. Taken on: Canon EOS R5, Documentary photography, 50mm f/1.2 lens."
+  },
+  {
+    "time": 145,
+    "prompt": "A digital render of an American elementary school, children eagerly learning, while male angels infuse the lessons with wisdom, ensuring education aligns with prophetic principles. Created with: Unreal Engine, bright and cheerful atmosphere, attention to classroom details."
+  },
+  {
+    "time": 146,
+    "prompt": "An oil painting of a European royal court, monarchs making crucial decisions, while male angels offer guidance, their counsel rooted in timeless prophecies. Painted with: Oils, canvas, regal tones. Influenced by: Renaissance art."
+  },
+  {
+    "time": 147,
+    "prompt": "A photograph of an American urban park, families enjoying a sunny day, while male angels spread joy, their presence a fulfillment of prophetic happiness. Taken on: Sony Alpha 7 III, Landscape photography, 35mm f/1.4 lens."
+  },
+  {
+    "time": 148,
+    "prompt": "A digital illustration of an American subway station during rush hour, commuters in transit, while male angels ensure safety, their vigilance a testament to prophetic protection. Designed with: CorelDRAW, dynamic angles, urban setting."
+  },
+  {
+    "time": 149,
+    "prompt": "An oil painting of a European monastery, monks in deep contemplation, while male angels share divine insights, ensuring spiritual practices align with prophetic teachings. Painted with: Acrylics, wood panel, serene colors. Influenced by: Medieval art."
+  },
+  {
+    "time": 150,
+    "prompt": "A photograph of an American construction site, workers building a skyscraper, while male angels provide strength, their support a tangible expression of prophetic endurance. Taken on: Nikon D850, Construction photography, 24mm f/1.4 lens."
+  },
+  {
+    "time": 151,
+    "prompt": "A digital render of an American courtroom, a judge delivering justice, while male angels uphold righteousness, ensuring verdicts align with prophetic standards. Created with: Blender, realistic textures, attention to legal details."
+  },
+  {
+    "time": 152,
+    "prompt": "An oil painting of a European battlefield, knights in combat, while male angels fight alongside them, their bravery a manifestation of prophetic courage. Painted with: Oils, large canvas, dynamic composition. Influenced by: Romanticism."
+  },
+  {
+    "time": 153,
+    "prompt": "A photograph of an American farm at harvest time, workers gathering crops, while male angels assist, ensuring abundance in accordance with prophetic blessings. Taken on: Canon EOS 5D Mark IV, Agriculture photography, 50mm f/1.8 lens."
+  },
+  {
+    "time": 154,
+    "prompt": "A digital illustration of an American small town during a community festival, residents celebrating together, while male angels participate, their joy a reflection of prophetic community. Designed with: Adobe Illustrator, bright and cheerful colors, festive atmosphere."
+  },
+  {
+    "time": 155,
+    "prompt": "An oil painting of a European forest, wildlife in their natural habitat, while male angels protect and nurture, ensuring creation thrives in alignment with prophetic stewardship. Painted with: Acrylics, canvas, vibrant nature colors. Influenced by: Romantic landscape painting."
+  },
+  {
+    "time": 156,
+    "prompt": "A photograph of an American high school graduation, students receiving their diplomas, while male angels bless their futures, ensuring success aligns with prophetic promises. Taken on: Sony A9, Event photography, 85mm f/1.4 lens."
+  },
+  {
+    "time": 157,
+    "prompt": "A digital render of an American beach at sunset, families enjoying the view, while male angels paint the skies, their artwork a testament to prophetic beauty. Created with: Cinema 4D, realistic lighting, warm color palette."
+  },
+  {
+    "time": 158,
+    "prompt": "An oil painting of a European royal coronation, a new king being crowned, while male angels bear witness, ensuring the reign is in accordance with prophetic authority. Painted with: Oils, gold leaf, regal colors. Influenced by: Baroque art."
+  },
+  {
+    "time": 159,
+    "prompt": "A photograph of an American music festival, bands performing on stage, while male angels inspire the melodies, ensuring the music aligns with prophetic harmony. Taken on: Nikon D5, Concert photography, 24-70mm f/2.8 lens."
+  },
+  {
+    "time": 160,
+    "prompt": "A digital illustration of an American retirement home, elderly residents sharing stories, while male angels offer companionship, their presence a fulfillment of prophetic care. Designed with: Adobe Photoshop, soft lighting, comfortable setting."
+  },
+  {
+    "time": 161,
+    "prompt": "An oil painting of a European medieval feast, nobility and commoners celebrating together, while male angels ensure abundance, their involvement a manifestation of prophetic prosperity. Painted with: Oils, large canvas, festive colors. Influenced by: Gothic art."
+  },
+  {
+    "time": 162,
+    "prompt": "A photograph of an American veterans’ parade, former soldiers being honored, while male angels salute their service, ensuring respect aligns with prophetic gratitude. Taken on: Canon EOS 1D X, Street photography, 70-200mm f/2.8 lens."
+  },
+  {
+    "time": 163,
+    "prompt": "A digital render of an American artist’s studio, a painter at work, while male angels guide the brushstrokes, ensuring the art aligns with prophetic visions. Created with: 3D Studio Max, attention to artistic details, natural lighting."
+  },
+  {
+    "time": 164,
+    "prompt": "An oil painting of a European royal hunt, nobility on horseback, while male angels guide the animals, ensuring balance in accordance with prophetic stewardship. Painted with: Acrylics, canvas, dynamic composition. Influenced by: Baroque art."
+  },
+  {
+    "time": 165,
+    "prompt": "A photograph of an American poetry reading, poets sharing their work, while male angels inspire the words, ensuring the poetry aligns with prophetic truths. Taken on: Sony Alpha 7R III, Indoor photography, 50mm f/1.4 lens."
+  },
+  {
+    "time": 166,
+    "prompt": "A digital illustration of an American children’s hospital, young patients receiving care, while male angels bring healing and comfort, fulfilling prophecies of compassion. Designed with: Adobe Illustrator, warm tones, caring atmosphere."
+  },
+
+  {
+    "time": 167,
+    "prompt": "A celestial vision of John the Apostle, bathed in divine light, receiving the Three Angels' Messages. The heavenly radiance and John's awe-struck expression emphasize the divine revelation. (Medium: Painting, Subject: John the Apostle, Colors: Heavenly light, Pose: Awe-struck, Viewing Angle: Divine perspective, Background: Celestial realm)"
+  },
+  {
+    "time": 168,
+    "prompt": "An ethereal landscape illustrating the first angel's message: 'Fear God and give glory to Him.' Show the Earth as a fragile jewel in the cosmos, surrounded by a sense of cosmic reverence. (Medium: Digital art, Subject: Earth in cosmos, Colors: Cosmic blues and purples, Background: Cosmic expanse, Details: Glowing stars)"
+  },
+  {
+    "time": 169,
+    "prompt": "The second angel's message depicted through a vibrant digital composition. Show Babylon's fall with symbolic elements, such as a crumbling tower and the chains of sin breaking. (Medium: Digital art, Subject: Babylon's fall, Colors: Fiery reds and dark shadows, Background: Crumbling cityscape)"
+  },
+  {
+    "time": 170,
+    "prompt": "An awe-inspiring portrayal of the third angel's message. Present the consequences of worshiping the beast and its image, with vivid symbolism like scales of justice and the Lamb of God. (Medium: Painting, Subject: Symbolic scales, Colors: Contrast between light and dark, Background: Divine courtroom)"
+  },
+  {
+    "time": 171,
+    "prompt": "A dynamic illustration of the angel flying 'in the midst of heaven,' proclaiming the everlasting gospel. Show the angel soaring through the celestial expanse, leaving a trail of heavenly light. (Medium: Digital art, Subject: Angel in flight, Colors: Celestial blues and radiant whites, Background: Cosmic horizon)"
+  },
+  {
+    "time": 172,
+    "prompt": "A striking digital artwork capturing the concept of 'Babylon the Great' with intricate details and a sense of grandeur. Utilize architectural elements and symbolism to represent Babylon's influence. (Medium: Digital art, Subject: Babylon the Great, Colors: Opulent golds and deep purples, Background: Grand cityscape)"
+  },
+  {
+    "time": 173,
+    "prompt": "A serene digital painting depicting the moment John the Apostle receives the Three Angels' Messages while in contemplation. (Medium: Digital art, Subject: John the Apostle, Colors: Tranquil blues and soft yellows, Pose: Contemplative, Viewing Angle: Profile, Background: Peaceful garden)"
+  },
+  {
+    "time": 174,
+    "prompt": "A cosmic scene portraying the Earth as a central figure, radiating with divine light, as the first angel's message is delivered. (Medium: Digital art, Subject: Radiant Earth, Colors: Celestial hues, Background: Cosmic radiance, Details: Glowing continents)"
+  },
+  {
+    "time": 175,
+    "prompt": "An abstract digital composition symbolizing Babylon's fall through a blend of vibrant colors and fractured shapes. (Medium: Digital art, Subject: Abstract Babylon, Colors: Vibrant and fragmented, Background: Chaotic void)"
+  },
+  {
+    "time": 176,
+    "prompt": "A dramatic painting showcasing the judgment scene from the third angel's message, with the Lamb of God and the symbolic scales of justice. (Medium: Painting, Subject: Judgment scene, Colors: Intense contrasts, Background: Divine courtroom)"
+  },
+  {
+    "time": 177,
+    "prompt": "A celestial view of the angel flying in the midst of heaven, casting divine light upon the Earth. (Medium: Digital art, Subject: Angel in flight, Colors: Heavenly radiance, Background: Cosmic expanse)"
+  },
+  {
+    "time": 178,
+    "prompt": "A surreal digital artwork portraying the concept of 'Babylon the Great' through a maze of surreal architecture and symbolic imagery. (Medium: Digital art, Subject: Surreal Babylon, Colors: Dreamlike, Background: Maze of symbolism)"
+  },
+  {
+    "time": 179,
+    "prompt": "An iconic digital illustration of John the Apostle as he writes the revelations of the Three Angels' Messages, with a quill pen and a scroll. (Medium: Digital art, Subject: John the Apostle writing, Colors: Antique parchment tones, Background: Ancient script)"
+  },
+  {
+    "time": 180,
+    "prompt": "A celestial vision of the first angel's message with the Earth as a glowing orb and the message written in radiant letters across the sky. (Medium: Digital art, Subject: Glowing Earth, Colors: Luminescent, Background: Starry sky)"
+  },
+  {
+    "time": 181,
+    "prompt": "A digital composition depicting the fall of Babylon as a massive, crumbling tower shrouded in darkness, contrasting with a gleaming city of righteousness. (Medium: Digital art, Subject: Babylon's fall, Colors: Dark tower vs. shining city, Background: Nighttime)"
+  },
+  {
+    "time": 182,
+    "prompt": "A captivating painting of the third angel's message, where the Lamb of God stands as the central figure, radiating purity and grace. (Medium: Painting, Subject: Lamb of God, Colors: Pure whites and golden highlights, Background: Divine radiance)"
+  },
+  {
+    "time": 183,
+    "prompt": "A dynamic digital illustration of the angel flying amidst a cosmic symphony, with swirling galaxies and celestial bodies forming a breathtaking backdrop. (Medium: Digital art, Subject: Angel in cosmic symphony, Colors: Cosmic swirls and hues, Background: Cosmic orchestra)"
+  },
+  {
+    "time": 184,
+    "prompt": "An enigmatic digital artwork symbolizing 'Babylon the Great' through a labyrinthine cityscape filled with hidden meanings. (Medium: Digital art, Subject: Enigmatic Babylon, Colors: Mysterious, Background: Intricate city maze)"
+  },
+  {
+    "time": 185,
+    "prompt": "A captivating digital portrait of John the Apostle with his eyes filled with revelation and wisdom as he receives the Three Angels' Messages. (Medium: Digital art, Subject: John the Apostle portrait, Colors: Wise and illuminated, Background: Divine aura)"
+  },
+  {
+    "time": 186,
+    "prompt": "A cosmic interpretation of the first angel's message, where the Earth shines as a beacon of hope amidst the vastness of the universe. (Medium: Digital art, Subject: Earth as beacon, Colors: Cosmic brilliance, Background: Galactic cosmos)"
+  },
+  {
+    "time": 187,
+    "prompt": "An abstract digital composition symbolizing the fall of Babylon through a collision of conflicting colors and shapes. (Medium: Digital art, Subject: Abstract Babylon's fall, Colors: Conflicting and chaotic, Background: Collision of forms)"
+  },
+  {
+    "time": 188,
+    "prompt": "A profound painting depicting the judgment scene from the third angel's message, with the symbolic scales of justice held by celestial beings. (Medium: Painting, Subject: Celestial judgment, Colors: Profound contrasts, Background: Divine court)"
+  },
+  {
+    "time": 189,
+    "prompt": "A celestial view of the angel flying in the midst of heaven, casting a brilliant trail of light upon the Earth's surface. (Medium: Digital art, Subject: Angel's radiant flight, Colors: Luminous trail, Background: Celestial atmosphere)"
+  },
+  {
+    "time": 190,
+    "prompt": "A surreal digital artwork portraying the concept of 'Babylon the Great' through an abstract fusion of architectural elements and symbolism. (Medium: Digital art, Subject: Abstract Babylon, Colors: Surreal blend, Background: Symbolic fusion)"
+  },
+  {
+    "time": 191,
+    "prompt": "A majestic digital painting of John the Apostle writing the revelations of the Three Angels' Messages with divine inspiration. (Medium: Digital art, Subject: John writing with inspiration, Colors: Majestic and radiant, Background: Divine glow)"
+  },
+  {
+    "time": 192,
+    "prompt": "A celestial vision of the first angel's message as a radiant message in the night sky, illuminating the Earth below. (Medium: Digital art, Subject: Radiant message in the sky, Colors: Nighttime brilliance, Background: Starry night)"
+  },
+  {
+    "time": 193,
+    "prompt": "A dramatic digital composition symbolizing Babylon's fall with a crumbling tower enveloped in flames and darkness. (Medium: Digital art, Subject: Burning Babylon, Colors: Fiery and dark, Background: Tower in chaos)"
+  },
+  {
+    "time": 194,
+    "prompt": "A powerful painting illustrating the third angel's message with the Lamb of God as the focal point, radiating divine authority. (Medium: Painting, Subject: Lamb of God's authority, Colors: Divine radiance, Background: Celestial glory)"
+  },
+  {
+    "time": 195,
+    "prompt": "A dynamic digital artwork of the angel flying amidst a celestial dance, with swirling stars and nebulae creating a mesmerizing backdrop. (Medium: Digital art, Subject: Angel in cosmic dance, Colors: Celestial dance, Background: Cosmic ballet)"
+  },
+  {
+    "time": 196,
+    "prompt": "An intricate digital composition symbolizing 'Babylon the Great' through a maze of enigmatic symbols and hidden meanings. (Medium: Digital art, Subject: Enigmatic Babylon, Colors: Symbolic maze, Background: Cryptic symbolism)"
+  },
+  {
+    "time": 197,
+    "prompt": "A luminous digital portrait of John the Apostle, his countenance shining with divine wisdom as he receives the Three Angels' Messages. (Medium: Digital art, Subject: Illuminated John, Colors: Luminous wisdom, Background: Divine aura)"
+  },
+  {
+    "time": 198,
+    "prompt": "A celestial interpretation of the first angel's message with the Earth radiating as a beacon of light amid the cosmic expanse. (Medium: Digital art, Subject: Earth as cosmic beacon, Colors: Cosmic illumination, Background: Galactic radiance)"
+  },
+  {
+    "time": 199,
+    "prompt": "An abstract digital composition symbolizing the fall of Babylon through a tumultuous clash of colors and shapes. (Medium: Digital art, Subject: Abstract Babylon's fall, Colors: Tumultuous collision, Background: Chaotic convergence)"
+  },
+  {
+    "time": 200,
+    "prompt": "A profound painting depicting the judgment scene from the third angel's message, where celestial beings hold the scales of justice amidst divine radiance. (Medium: Painting, Subject: Divine judgment, Colors: Radiant justice, Background: Celestial courtroom)"
+  },
+  {
+    "time": 201,
+    "prompt": "A celestial view of the angel flying in the midst of heaven, leaving a luminous trail across the star-studded cosmic canvas. (Medium: Digital art, Subject: Angel's luminous flight, Colors: Starlit trail, Background: Cosmic tapestry)"
+  },
+  {
+    "time": 202,
+    "prompt": "A surreal digital artwork portraying the concept of 'Babylon the Great' through a surreal fusion of architectural elements and symbolism. (Medium: Digital art, Subject: Surreal Babylon, Colors: Dreamlike fusion, Background: Symbolic synthesis)"
+  },
+  {
+    "time": 203,
+    "prompt": "A majestic digital painting of John the Apostle writing the revelations of the Three Angels' Messages with divine inspiration. (Medium: Digital art, Subject: John writing with divine inspiration, Colors: Majestic inspiration, Background: Divine aura)"
+  },
+  {
+    "time": 204,
+    "prompt": "A celestial vision of the first angel's message as a radiant message in the night sky, illuminating the Earth below. (Medium: Digital art, Subject: Radiant message in the night sky, Colors: Nocturnal radiance, Background: Starry firmament)"
+  },
+  {
+    "time": 205,
+    "prompt": "A dramatic digital composition symbolizing Babylon's fall with a crumbling tower engulfed in flames and darkness. (Medium: Digital art, Subject: Tower in turmoil, Colors: Infernal blaze, Background: Tower's demise)"
+  },
+  {
+    "time": 206,
+    "prompt": "A powerful painting illustrating the third angel's message with the Lamb of God radiating divine authority and righteousness. (Medium: Painting, Subject: Lamb of God's righteousness, Colors: Divine glory, Background: Celestial splendor)"
+  },
+  {
+    "time": 207,
+    "prompt": "A dynamic digital artwork of the angel flying amidst a cosmic celebration, with swirling galaxies and stars forming a celestial party. (Medium: Digital art, Subject: Angel in cosmic celebration, Colors: Celestial festivity, Background: Cosmic jubilation)"
+  },
+  {
+    "time": 208,
+    "prompt": "An intricate digital composition symbolizing 'Babylon the Great' through a labyrinth of intricate symbols and enigmatic meanings. (Medium: Digital art, Subject: Enigmatic Babylon, Colors: Symbolic labyrinth, Background: Cryptic complexity)"
+  },
+  {
+    "time": 209,
+    "prompt": "A luminous digital portrait of John the Apostle, his expression illuminated by divine wisdom as he receives the Three Angels' Messages. (Medium: Digital art, Subject: Illuminated John, Colors: Luminous revelation, Background: Divine enlightenment)"
+  },
+  {
+    "time": 210,
+    "prompt": "A celestial interpretation of the first angel's message with the Earth radiating as a beacon of light amid the cosmic expanse. (Medium: Digital art, Subject: Earth as cosmic beacon, Colors: Cosmic beacon, Background: Galactic brilliance)"
+  },
+  {
+    "time": 211,
+    "prompt": "An abstract digital composition symbolizing the fall of Babylon through a tumultuous clash of colors and shapes. (Medium: Digital art, Subject: Abstract Babylon's fall, Colors: Chaotic descent, Background: Tumultuous descent)"
+  },
+  {
+    "time": 212,
+    "prompt": "A profound painting depicting the judgment scene from the third angel's message, where celestial beings hold the scales of justice amidst divine radiance. (Medium: Painting, Subject: Celestial judgment, Colors: Divine scales, Background: Celestial tribunal)"
+  },
+  {
+    "time": 213,
+    "prompt": "A celestial view of the angel flying in the midst of heaven, leaving a luminous trail across the star-studded cosmic canvas. (Medium: Digital art, Subject: Angel's luminous flight, Colors: Celestial journey, Background: Cosmic journey)"
+  },
+  {
+    "time": 214,
+    "prompt": "A surreal digital artwork portraying the concept of 'Babylon the Great' through a surreal fusion of architectural elements and symbolism. (Medium: Digital art, Subject: Surreal Babylon, Colors: Dreamlike fusion, Background: Symbolic synthesis)"
+  },
+  {
+    "time": 215,
+    "prompt": "A majestic digital painting of John the Apostle writing the revelations of the Three Angels' Messages with divine inspiration. (Medium: Digital art, Subject: John writing with divine inspiration, Colors: Majestic inspiration, Background: Divine aura)"
+  },
+  {
+    "time": 216,
+    "prompt": "A celestial vision of the first angel's message as a radiant message in the night sky, illuminating the Earth below. (Medium: Digital art, Subject: Radiant message in the night sky, Colors: Nocturnal radiance, Background: Starry firmament)"
+  },
+  {
+    "time": 217,
+    "prompt": "A dramatic digital composition symbolizing Babylon's fall with a crumbling tower engulfed in flames and darkness. (Medium: Digital art, Subject: Tower in turmoil, Colors: Infernal blaze, Background: Tower's demise)"
+  },
+  {
+    "time": 218,
+    "prompt": "A powerful painting illustrating the third angel's message with the Lamb of God radiating divine authority and righteousness. (Medium: Painting, Subject: Lamb of God's righteousness, Colors: Divine glory, Background: Celestial splendor)"
+  },
+  {
+    "time": 219,
+    "prompt": "A dynamic digital artwork of the angel flying amidst a cosmic celebration, with swirling galaxies and stars forming a celestial party. (Medium: Digital art, Subject: Angel in cosmic celebration, Colors: Celestial festivity, Background: Cosmic jubilation)"
+  }
+]

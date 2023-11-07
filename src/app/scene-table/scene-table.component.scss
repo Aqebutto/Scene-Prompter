@@ -122,3 +122,54 @@ button {
     cursor: not-allowed;
   }
 }
+// Define a mixin for a focus style to reuse
+@mixin focus-style {
+  outline: none;
+  border: 2px solid darken($primary-color, 15%);
+  box-shadow: 0 0 8px rgba($primary-color, 0.8);
+}
+
+// Define your primary color
+$primary-color: #3498db; // This is a nice blue color
+
+textarea {
+  width: 100%; // Full-width textarea
+  padding: 10px 15px; // Padding inside the textarea
+  border: 1px solid #ccc; // Default border color
+  border-radius: 5px; // Rounded corners
+  background-color: #f8f8f8; // Light grey background
+  font-size: 1rem; // Base font size
+  line-height: 1.5; // Line height for the text
+  transition: border-color 0.3s, box-shadow 0.3s; // Smooth transition for focus
+
+  // Placeholder style
+  &::placeholder {
+    color: #aaa; // Light color for placeholder text
+  }
+
+  // Focus state
+  &:focus {
+    @include focus-style; // Use the focus style mixin
+  }
+
+  // Hover state
+  &:hover {
+    border-color: lighten($primary-color, 10%);
+  }
+
+  // Disabled state
+  &:disabled {
+    background-color: #eee;
+    cursor: not-allowed;
+  }
+}
+
+// For error messaging (optional)
+textarea.is-error {
+  border-color: #e74c3c; // Red color for errors
+
+  &:focus {
+    @include focus-style;
+    border-color: #e74c3c; // Keep red color on focus when there is an error
+  }
+}

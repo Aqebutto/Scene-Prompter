@@ -10,11 +10,13 @@ import { BehaviorSubject } from 'rxjs';
 interface Scene {
   id?: number;
   time: number;
-  original_text: string;
+  original_text?: string;
   prompt: string;
   gptPrompt?: string;
   length?: number;
   imageUrl?: string;
+  similarity_score?: number;
+  best_match_file?: string;
 }
 interface DalleResponse {
   generatedText: string;
@@ -31,7 +33,7 @@ export class SceneTableComponent implements OnInit {
   scenesObservable$ = this.scenes$.asObservable();
 
   API_KEY = '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';
-  apiUrl = 'assets/scenes.json';
+  apiUrl = 'assets/scenes_target.json';
   editableSceneId: number | null = null;
   editableScene: Partial<Scene> = {};
   updatedScene: Partial<Scene> = {};
@@ -49,29 +51,32 @@ export class SceneTableComponent implements OnInit {
     // this.getScenes();
     const totalLength = 0;
     const loadedScenes = this.loadScenesFromLocalStorage();
-    if (loadedScenes) {
-      this.scenes$.next(loadedScenes); // Update the BehaviorSubject with the scenes from local storage
-    } else {
-      // If there are no scenes in local storage, fetch from the JSON file
-      console.log('Got scenes from json');
-      this.http.get<Scene[]>('./assets/scenes.json').subscribe((data) => {
-        this.scenes$.next(data);
-      });
-    }
+    console.log('Got scenes from json');
+    this.http.get<Scene[]>('./assets/scenes.json').subscribe((data) => {
+      this.scenes$.next(data);
+    });
+    // if (loadedScenes) {
+    //   this.scenes$.next(loadedScenes); // Update the BehaviorSubject with the scenes from local storage
+    // } else {
+    //   // If there are no scenes in local storage, fetch from the JSON file
+
+    // }
     this.scenes$.subscribe((data: Scene[]) => {
       let totalLength = 0;
 
       data.forEach((scene: Scene) => {
-        scene.length = scene.original_text.length * 0.066;
-        // generate all gpt Prompts
-        // this.generateGptPrompt(scene);
+        if (scene.original_text) {
+          scene.length = scene.original_text.length * 0.066;
+          // generate all gpt Prompts
+          // this.generateGptPrompt(scene);
 
-        if (!scene.gptPrompt || scene.gptPrompt.trim().length === 0) {
-          this.generateGptPrompt(scene);
+          if (!scene.gptPrompt || scene.gptPrompt.trim().length === 0) {
+            // this.generateGptPrompt(scene);
+          }
+
+          this.picsLengthArray.push(scene.original_text.length * 0.066);
+          totalLength += scene.original_text.length;
         }
-
-        this.picsLengthArray.push(scene.original_text.length * 0.066);
-        totalLength += scene.original_text.length;
       });
       console.log(this.picsLengthArray);
       let averageLength = totalLength / data.length;
@@ -97,10 +102,11 @@ export class SceneTableComponent implements OnInit {
         switchMap((averageLength: any) =>
           this.scenes$.pipe(
             map((scenes) =>
-              scenes.filter(
-                (scene) =>
-                  scene.original_text.length > averageLength * multiplier
-              )
+              scenes.filter((scene) => {
+                if (scene.original_text) {
+                  scene.original_text.length > averageLength * multiplier;
+                }
+              })
             )
           )
         )
@@ -111,20 +117,47 @@ export class SceneTableComponent implements OnInit {
     getAboveAverageScenes(1.2).subscribe((scenes) => {
       // console.log(scenes); // Logs all scenes where 'original_text' length is 20% above average
     });
+    // this.openaiService
+    //   .getDalleResponse(
+    //     'A watercolor painting portraying a vision of the Son of Man, coming with the clouds of heaven. He approaches the Ancient of Days, and they meet in a celestial realm filled with radiant light and ethereal beauty. Painted with: Soft watercolor blends, emphasizing the dreamlike and divine nature of the encounter.'
+    //   )
+    //   .subscribe((res) => {
+    //     console.log(res);
+    //   });
   }
 
   generateGptPrompt(scene: Scene): void {
-    this.openaiService
-      .getGPTResponseTwo(scene.original_text)
-      .subscribe((gptPrompt: string) => {
-        scene.gptPrompt = gptPrompt;
-        console.log(gptPrompt);
+    if (scene.original_text)
+      this.openaiService
+        .getGPTResponseTwo(scene.original_text)
+        .subscribe((gptPrompt: string) => {
+          scene.gptPrompt = gptPrompt;
+          console.log(gptPrompt);
 
-        firstValueFrom(this.scenes$).then((scenes: Scene[]) => {
-          this.saveScenes(scenes);
+          firstValueFrom(this.scenes$).then((scenes: Scene[]) => {
+            this.saveScenes(scenes);
+          });
         });
-      });
   }
+
+  generateGptImage(scene: Scene): void {
+    this.openaiService.generateImage(scene.prompt, 1).subscribe((urls) => {
+      // Update the scene with the image URL
+      scene.imageUrl = urls[0]; // Since we're only generating one image
+
+      // Update the BehaviorSubject with the new scene data
+      const updatedScenes = this.scenes$.getValue().map((sc) => {
+        if (sc === scene) {
+          // Find the scene to update (you could also match by an ID if available)
+          return { ...sc, imageUrl: scene.imageUrl };
+        }
+        return sc;
+      });
+
+      this.scenes$.next(updatedScenes); // Emit the updated scenes
+    });
+  }
+
   saveScenes(scenes: Scene[]): void {
     // const blob = new Blob([JSON.stringify(scenes, null, 2)], {
     //   type: 'application/json',
