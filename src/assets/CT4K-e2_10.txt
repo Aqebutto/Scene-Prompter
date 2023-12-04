@@ -1,0 +1,100 @@
+Time: 0:
+Find a subject in this text:
+Long ago, God created a beautiful world. Everything was perfect, like a big, wonderful puzzle where every piece fits just right. There were no sick animals or dying plants.
+Now use that subject to make a prompt
+====
+Time: 10:
+Find a subject in this text:
+The world was a happy place without any problems. God looked at the mountains, oceans, animals, and plants, and felt really proud and happy with everything. But then, something changed.
+Now use that subject to make a prompt
+====
+Time: 20:
+Find a subject in this text:
+There was an angel named Satan who didn't like following God's rules. He was kicked out of heaven because he was naughty.
+Now use that subject to make a prompt
+====
+Time: 30:
+Find a subject in this text:
+Satan tricked the first man, Adam, into doing something God had told him not to do. This mistake brought a lot of bad things into the world, like people being unkind to each other and getting sick.
+Now use that subject to make a prompt
+====
+Time: 40:
+Find a subject in this text:
+God saw that people were struggling because of what Adam did and knew they needed help. So, His Son, Jesus, decided to come down to earth to fight against Satan's meanness.
+Now use that subject to make a prompt
+====
+Time: 50:
+Find a subject in this text:
+Satan had tricked lots of people and angels before, including Adam. When Adam did something wrong, Satan thought he could trick Jesus too.
+Now use that subject to make a prompt
+====
+Time: 60:
+Find a subject in this text:
+All the bad angels were watching and hoping this was their chance to win against Jesus and show they didn't need to listen to God. Jesus was very brave and knew what he had to do.
+Now use that subject to make a prompt
+====
+Time: 70:
+Find a subject in this text:
+Even though it was hard, he knew he had to die to help everyone. His death was like a huge, powerful gift to fix the bad things that started with Adam's mistake.
+Now use that subject to make a prompt
+====
+Time: 80:
+Find a subject in this text:
+Jesus did this to make things right again, to make the world a better place. It was really tough for Jesus, but he did it because of his huge love for all of us.
+Now use that subject to make a prompt
+====
+Time: 90:
+Find a subject in this text:
+He trusted his Father in heaven and knew that by dying, he could save everyone and bring back the happiness and goodness that the world had lost. So, Jesus's plan was a big one.
+Now use that subject to make a prompt
+====
+Time: 100:
+Find a subject in this text:
+He knew that by dying, He could beat Satan's tricks and make everything good again. It was like He was fixing a big, broken machine, making sure all the parts worked properly again.
+Now use that subject to make a prompt
+====
+Time: 110:
+Find a subject in this text:
+Jesus's love was so strong that even dying couldn't stop Him. He came back to life, which was a huge surprise for Satan and the bad angels.
+Now use that subject to make a prompt
+====
+Time: 120:
+Find a subject in this text:
+They thought they had won, but Jesus showed them that good is always stronger than bad.
+Now use that subject to make a prompt
+====
+Time: 130:
+Find a subject in this text:
+After Jesus came back to life, He went back to heaven, but He left a special kind of help for everyone on earth.
+Now use that subject to make a prompt
+====
+Time: 140:
+Find a subject in this text:
+This help is like a whisper in our hearts, telling us what's good and right. It helps us be kind, share, and take care of each other.
+Now use that subject to make a prompt
+====
+Time: 150:
+Find a subject in this text:
+Jesus did all this so that we could be happy and make the world a kind place, just like it was supposed to be. And that's not all.
+Now use that subject to make a prompt
+====
+Time: 160:
+Find a subject in this text:
+Jesus promised that one day, He would come back and make everything perfect again, just like it was in the beginning. No more sadness, no more being mean, and no more getting hurt.
+Now use that subject to make a prompt
+====
+Time: 170:
+Find a subject in this text:
+It's like He's going to restart the world, making it a big, beautiful, happy place for everyone.
+Now use that subject to make a prompt
+====
+Time: 180:
+Find a subject in this text:
+So, whenever you're feeling sad or scared, remember that Jesus did something really brave and loving for all of us.
+Now use that subject to make a prompt
+====
+Time: 190:
+Find a subject in this text:
+He showed us that being kind and good is the best way to live and that there's always hope for a happy, beautiful world.
+Now use that subject to make a prompt
+====

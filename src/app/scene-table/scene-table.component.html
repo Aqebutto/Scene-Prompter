@@ -28,16 +28,6 @@
         >
           Image in pic
         </th>
-        <th
-          class="px-6 py-3 text-left text-xs font-medium text-yellow-500 uppercase tracking-wider"
-        >
-          Similarity_score
-        </th>
-        <th
-          class="px-6 py-3 text-left text-xs font-medium text-yellow-500 uppercase tracking-wider"
-        >
-          Image by similarity_score
-        </th>
 
         <th
           class="px-6 py-3 text-left text-xs font-medium text-yellow-700 uppercase tracking-wider"
@@ -62,7 +52,12 @@
               }}</textarea>
               <b
                 >{{ scene.original_text.length }} ca.
-                {{ 0.066 * scene.original_text.length }} sec</b
+                {{ 0.066 * scene.original_text.length }} sec for Charles II</b
+              >
+              <br />
+              <b
+                >{{ scene.original_text.length }} ca.
+                {{ 0.06006 * scene.original_text.length }} sec for Sara</b
               >
               <!-- | slice : 0 : 5  -->
             </td>
@@ -73,19 +68,7 @@
           <td>
             <img
               *ngIf="scene.time"
-              [src]="'/assets/allPics/' + scene.time + '.png'"
-              alt="Image for {{ scene.time }}"
-            />
-          </td>
-          <td class="px-6 py-4 whitespace-nowrap">
-            <label name="" id="" cols="30" rows="10">{{
-              scene.similarity_score
-            }}</label>
-          </td>
-          <td>
-            <img
-              *ngIf="scene.time"
-              [src]="'/assets/allPics/' + scene.best_match_file"
+              [src]="'http://localhost:3000/Pics/' + scene.time + '.png'"
               alt="Image for {{ scene.time }}"
             />
           </td>
@@ -108,6 +91,14 @@
               {{ scene.prompt | slice : 0 : 5 }}
             </button>
           </td>
+          <td class="px-6 py-4 whitespace-nowrap">
+            <input
+              style="width: 50px; height: 50px"
+              type="checkbox"
+              [(ngModel)]="scene.selected"
+              (change)="updateSelectedScenes()"
+            />
+          </td>
           <td>
             <!-- <button
               type="button"
@@ -118,15 +109,44 @@
               Generate Gpt Prompt
             </button> -->
             <br /><br />
+            <p *ngIf="countdown > 0">Countdown: {{ countdown }} seconds</p>
+            <p *ngIf="countdown === 0">Generating Image...</p>
+
             <button
               type="button"
-              style="color: yellow"
+              style="color: white"
               class="btn btn-secondary mt-2"
               class="btn-generate"
               (click)="generateGptImage(scene)"
             >
               Generate DALLE img
             </button>
+            <!-- <br />
+            <br />
+            <br />
+            <button
+              style="color: black"
+              class="btn-generate-five"
+              (click)="generateImagesForScenes()"
+            >
+              Generate 5 images
+            </button> -->
+            <br />
+            <br />
+            <br />
+            <!-- <b *ngIf="leoCountdown > 0"
+              >Countdown: {{ leoCountdown }} seconds</b
+            >
+            <br /> -->
+            <button
+              style="color: greenblack"
+              class="btn-generate-leo"
+              (click)="makeLeoAiImage(scene)"
+            >
+              Generate Leo Ai Image
+            </button>
+            <br />
+            <br />
             <!-- <button
               class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
               (click)="onSaveClick()"
@@ -176,6 +196,15 @@
     Print all scenes
   </button>
   <br />
+  <ng-container *ngIf="scenes$ | async as scenes">
+    <button
+      type="button"
+      class="cool-btn"
+      (click)="generateAllDalle3Images(scenes)"
+    >
+      Generate ALL Dalle3 img's
+    </button>
+  </ng-container>
 
   <ng-container *ngIf="picsLengthArray.length > 0">
     <ng-container *ngFor="let item of picsLengthArray">

@@ -4,7 +4,7 @@ import re
 target_scene_length = 10
 
 # Load the text of the story from a file
-with open("e14.txt", "r") as f:
+with open("TGSe3.txt", "r") as f:
     text = f.read()
 
 # Remove any extra whitespace from the text
@@ -37,7 +37,7 @@ while idx < len(text):
     idx = end_idx
 
 # Export the scenes to a text file
-with open("scenes_e14_10.txt", "w") as f:
+with open("TGSe3_10.txt", "w") as f:
     for i, scene in enumerate(scenes):
         f.write(f"Time: {i*10}:\n")
         f.write("Find a subject(s) and activity in this text:\n")

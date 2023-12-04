@@ -1,0 +1,320 @@
+Time: 0:
+Find a subject in this text:
+Guidance, a quintessential facet of mentoring, concentrates on aiding individuals in unlocking their intrinsic human potential.
+Now use that subject to make a prompt
+====
+Time: 10:
+Find a subject in this text:
+I-N-F-Js, with their profound inclination to enhance the well-being of others, find immense satisfaction in steering their peers towards heightened personal achievement.
+Now use that subject to make a prompt
+====
+Time: 20:
+Find a subject in this text:
+Unfortunately, counselors represent a mere fraction of the populace, barely exceeding one percent, a lamentable fact given their instrumental role in societal harmony.
+Now use that subject to make a prompt
+====
+Time: 30:
+Find a subject in this text:
+These Counselors, though inherently private and empathetically sensitive, might not often emerge as overt leaders. Nevertheless, they profoundly impact their intimate circles - families, friends, and colleagues - subtly molding and influencing from behind the scenes.
+Now use that subject to make a prompt
+====
+Time: 40:
+Find a subject in this text:
+Their reclusive yet amiable nature, coupled with a complex internal world, equips them adeptly for navigating intricate ethical dilemmas and providing solace to those in turmoil.
+Now use that subject to make a prompt
+====
+Time: 50:
+Find a subject in this text:
+As intellectual descendants of Plato's Idealists and Aristotle's Ethicists, counselors share numerous traits with their NF counterparts. They communicate in abstract terms and collaborate willingly towards common goals.
+Now use that subject to make a prompt
+====
+Time: 60:
+Find a subject in this text:
+Their interests lie deeply in the humanities, moral contemplations, and effective personnel management. Oriented towards altruism, they possess a credulous and mystical nature, constantly pursuing idealistic paths while keeping a keen eye on future possibilities.
+Now use that subject to make a prompt
+====
+Time: 70:
+Find a subject in this text:
+Their self-perception is anchored in being empathetic, benevolent, and authentic. counselors are often animated by enthusiasm, guided by intuition, and have a penchant for romance and identity-seeking, valuing recognition and aspiring to sage-like wisdom.
+Now use that subject to make a prompt
+====
+Time: 80:
+Find a subject in this text:
+Intellectually, they lean more towards diplomacy over strategies or tactical thinking.
+Now use that subject to make a prompt
+====
+Time: 90:
+Find a subject in this text:
+Organizational in nature, they often prefer the role of a directive mentor rather than an informative advocate, feeling more at ease in private counseling settings than in public teaching roles. Understanding Counselors can be a complex endeavor.
+Now use that subject to make a prompt
+====
+Time: 100:
+Find a subject in this text:
+They possess a rich, vivid internal world yet exhibit reservation in sharing their feelings, except with trusted confidants. In the company of loved ones, they freely express their emotions, radiating joy or reflecting somberness.
+Now use that subject to make a prompt
+====
+Time: 110:
+Find a subject in this text:
+Their acute empathy makes them vulnerable to emotional hurt from others, often leading them to seek solace in solitude. However, even long-standing friends may occasionally uncover unexpectedly revealing aspects of the Counselor's personality.
+Now use that subject to make a prompt
+====
+Time: 120:
+Find a subject in this text:
+These revelations are not signs of inconsistency; rather, they reflect the Counselor's deeply-held value of integrity and their intricate, enigmatic personal makeup that can sometimes be bewildering, even to themselves.
+Now use that subject to make a prompt
+====
+Time: 130:
+Find a subject in this text:
+This breed of Idealist harbors profound empathic prowess, capable of discerning the emotions, intentions, or hidden malevolence in others, often before these feelings surface in the individuals themselves.
+Now use that subject to make a prompt
+====
+Time: 140:
+Find a subject in this text:
+Such empathic acuity manifests as an ability to sense the concealed distress or ailments of others to a degree that eludes the understanding of other types.
+Now use that subject to make a prompt
+====
+Time: 150:
+Find a subject in this text:
+Even to counselors, the origin of their acute sensitivity to the emotions of others remains a mystery. Moreover, Counselors are arguably the most adept among all types at grasping psychic phenomena.
+Now use that subject to make a prompt
+====
+Time: 160:
+Find a subject in this text:
+What is commonly referred to as Extra-Sensory Perception (E-SP) might indeed be an extraordinary form of intuitive ability, encompassing both projection and introjection.
+Now use that subject to make a prompt
+====
+Time: 170:
+Find a subject in this text:
+This heightened intuition, often found in counselors, can extend to people, objects, and events, presenting itself in various forms: visions, foreknowledge, premonitions, and auditory or visual preludes of future happenings, along with remarkable long-distance communications with specific individuals.
+Now use that subject to make a prompt
+====
+Time: 180:
+Find a subject in this text:
+Due to their vivid imaginations, Counselors are frequently perceived as the most poetic, perhaps even the most mystical, among all personality types.
+Now use that subject to make a prompt
+====
+Time: 190:
+Find a subject in this text:
+Their speech is imbued with a level of imagery akin to that found in sophisticated and aesthetically rich literature like novels, plays, and poems.
+Now use that subject to make a prompt
+====
+Time: 200:
+Find a subject in this text:
+They often gravitate towards the liberal arts in their academic pursuits, and many find themselves drawn to the realm of creative writing as a vocation.
+Now use that subject to make a prompt
+====
+Time: 210:
+Find a subject in this text:
+In all forms of communication, they excel in the use of metaphor, effortlessly likening one thing to another. Their exceptional talent for metaphorical expression, both in writing and speech, is typically employed in crafting personalized messages.
+Now use that subject to make a prompt
+====
+Time: 220:
+Find a subject in this text:
+counselor writers often reveal that they write with a specific individual in mind, as addressing an impersonal audience tends to diminish their inspiration. In educational settings, counselors are generally diligent students, displaying a quiet yet notable creativity.
+Now use that subject to make a prompt
+====
+Time: 230:
+Find a subject in this text:
+They excel in problem-solving, approach their studies with seriousness, and relish academic endeavors. However, they may also show tendencies towards perfectionism, investing more effort into a task than its nature might warrant.
+Now use that subject to make a prompt
+====
+Time: 240:
+Find a subject in this text:
+Counselors flourish in vocations that center around engaging with individuals and fostering their personal growth, particularly through one-on-one interactions.
+Now use that subject to make a prompt
+====
+Time: 250:
+Find a subject in this text:
+Similar to other NF personality types, realms such as teaching and ministry are attractive to them, yet counselors find that adopting an expressive demeanor in these roles demands considerable energy.
+Now use that subject to make a prompt
+====
+Time: 260:
+Find a subject in this text:
+More congruent with their nature is the practice of general medicine or therapeutic counseling. As therapists, Counselors exhibit an extraordinary capacity to connect with the deeper emotional experiences of their clients.
+Now use that subject to make a prompt
+====
+Time: 270:
+Find a subject in this text:
+However, they also remain the most susceptible among personality types to the surfacing of their own suppressed emotions and thoughts.
+Now use that subject to make a prompt
+====
+Time: 280:
+Find a subject in this text:
+In the field of therapeutic counseling, counselors may gravitate towards clinical psychology and psychiatric medicine or opt to contribute through teaching or writing within these disciplines.
+Now use that subject to make a prompt
+====
+Time: 290:
+Find a subject in this text:
+In whichever path they choose, their success is often attributed to their personal warmth, enthusiasm, insight, dedication, originality, and interpretive abilities.
+Now use that subject to make a prompt
+====
+Time: 300:
+Find a subject in this text:
+Counselors possess the ability to excel in roles that demand solitude and meticulous attention, but they also thrive in group settings, provided the interactions are meaningful and not superficial.
+Now use that subject to make a prompt
+====
+Time: 310:
+Find a subject in this text:
+Their delicate approach to managing relationships makes them effective within organizational structures. They relish the opportunity to assist others with their challenges, capable of understanding and innovatively applying human systems for benevolent purposes.
+Now use that subject to make a prompt
+====
+Time: 320:
+Find a subject in this text:
+They place a high value on maintaining harmony within a team, striving for a smooth and congenial operational environment.
+Now use that subject to make a prompt
+====
+Time: 330:
+Find a subject in this text:
+Whether as employees or employers, counselors are acutely aware of the emotional climate around them, acting as a sensitive gauge for the sentiments of individuals and groups.
+Now use that subject to make a prompt
+====
+Time: 340:
+Find a subject in this text:
+They are proficient listeners skilled in consulting and collaborating with others. Their inclination to please and aversion to conflict makes them adept at fostering positive relationships.
+Now use that subject to make a prompt
+====
+Time: 350:
+Find a subject in this text:
+counselors are motivated by appreciation and employ recognition as a tool to inspire others.
+Now use that subject to make a prompt
+====
+Time: 360:
+Find a subject in this text:
+Conversely, exposure to hostile work environments or persistent criticism can lead to a decline in their confidence, resulting in unhappiness, a decline in productivity, and potentially adverse physical health effects.
+Now use that subject to make a prompt
+====
+Time: 370:
+Find a subject in this text:
+These gently-spoken Mentors yearn for harmony within their domestic sphere, perceiving both overt and covert interpersonal conflicts as profoundly detrimental to their sense of contentment.
+Now use that subject to make a prompt
+====
+Time: 380:
+Find a subject in this text:
+Their social circles are often characterized by their modest size yet are enriched by profound depth and enduring connections. In their romantic partnerships, they exhibit a deep devotion to their spouses.
+Now use that subject to make a prompt
+====
+Time: 390:
+Find a subject in this text:
+However, their receptivity to physical intimacy may not always be consistent, preferring moments when they feel emotionally attuned. This fluctuation between warmth and distance in their affectionate expressions can sometimes be perplexing to their partners.
+Now use that subject to make a prompt
+====
+Time: 400:
+Find a subject in this text:
+Often, an counselor's gestures of love are nuanced, imbued with a romantic and at times, poetic essence. As parents, Counselors show an unwavering dedication.
+Now use that subject to make a prompt
+====
+Time: 410:
+Find a subject in this text:
+A female counselor, in particular, may experience a mental and emotional fusion with her children, a connection so intense that it sometimes borders on being counterproductive for both mother and child.
+Now use that subject to make a prompt
+====
+Time: 420:
+Find a subject in this text:
+More commonly, however, Counselors establish a bond with their offspring that combines the warmth of a close friendship with firm guidance.
+Now use that subject to make a prompt
+====
+Time: 430:
+Find a subject in this text:
+They pay meticulous attention to the comfort, physical health, and emotional welfare of both their partners and children, ensuring a nurturing and supportive family environment.
+Now use that subject to make a prompt
+====
+Time: 440:
+Find a subject in this text:
+Delving deeper into the intricate psyche of the counselor's personality, we find a being of profound complexity and sensitivity.
+Now use that subject to make a prompt
+====
+Time: 450:
+Find a subject in this text:
+These individuals are akin to quiet guardians of emotional depth, seamlessly navigating the undercurrents of the human psyche with a grace and understanding that is rare and invaluable.
+Now use that subject to make a prompt
+====
+Time: 460:
+Find a subject in this text:
+counselors, with their intrinsic propensity for introspection, often find themselves in a perpetual quest for self-knowledge and understanding.
+Now use that subject to make a prompt
+====
+Time: 470:
+Find a subject in this text:
+This journey is not solely for their own benefit but also serves as a means to better assist those around them.
+Now use that subject to make a prompt
+====
+Time: 480:
+Find a subject in this text:
+They are acutely aware of the subtleties in their environment, absorbing the emotional energies that permeate their surroundings.
+Now use that subject to make a prompt
+====
+Time: 490:
+Find a subject in this text:
+This heightened sensitivity, while a gift, can also be a source of immense emotional strain, necessitating periods of solitude for reflection and recuperation.
+Now use that subject to make a prompt
+====
+Time: 500:
+Find a subject in this text:
+In their quest for meaningful connections, counselors often find themselves drawn to the arts, literature, and music, seeking solace and expression in these realms.
+Now use that subject to make a prompt
+====
+Time: 510:
+Find a subject in this text:
+Their creativity is not just a form of escapism but a conduit for expressing their deep-seated thoughts and feelings.
+Now use that subject to make a prompt
+====
+Time: 520:
+Find a subject in this text:
+Through these mediums, they can communicate the complexities of their inner world in ways that words alone may fail to capture.
+Now use that subject to make a prompt
+====
+Time: 530:
+Find a subject in this text:
+Despite their preference for depth and authenticity in relationships, counselors might struggle with a sense of loneliness.
+Now use that subject to make a prompt
+====
+Time: 540:
+Find a subject in this text:
+Their rare personality type, combined with their high standards for personal integrity and authenticity, can make it challenging for them to find kindred spirits who truly understand and appreciate the depths of their nature.
+Now use that subject to make a prompt
+====
+Time: 550:
+Find a subject in this text:
+Yet, when they do form connections, these bonds are deeply cherished, marked by a level of sincerity and devotion that is the hallmark of their interactions.
+Now use that subject to make a prompt
+====
+Time: 560:
+Find a subject in this text:
+In the professional realm, counselors are drawn to roles that align with their values and allow them to enact positive change.
+Now use that subject to make a prompt
+====
+Time: 570:
+Find a subject in this text:
+Their idealistic nature, coupled with a practical mindset, makes them effective in roles that require strategic planning and execution for the betterment of others.
+Now use that subject to make a prompt
+====
+Time: 580:
+Find a subject in this text:
+They might find fulfillment in careers that blend their humanitarian instincts with their organizational skills, such as non-profit leadership, educational reform, or community development. The spiritual life of a counselor is often rich and complex.
+Now use that subject to make a prompt
+====
+Time: 590:
+Find a subject in this text:
+They may explore various philosophical and spiritual paths, seeking a deeper understanding of the universe and its place within it.
+Now use that subject to make a prompt
+====
+Time: 600:
+Find a subject in this text:
+This spiritual exploration is not just an intellectual exercise but a deeply personal journey that shapes their worldview and guides their actions.
+Now use that subject to make a prompt
+====
+Time: 610:
+Find a subject in this text:
+In summary, the counselor's personality is a tapestry woven with threads of empathy, introspection, creativity, and altruism.
+Now use that subject to make a prompt
+====
+Time: 620:
+Find a subject in this text:
+They are the silent shepherds of emotional landscapes, navigating life with a profound sense of purpose and an unrelenting quest for deeper understanding and connection.
+Now use that subject to make a prompt
+====
+Time: 630:
+Find a subject in this text:
+Their presence, often understated, brings a depth of insight and compassion that enriches the lives of those they touch.
+Now use that subject to make a prompt
+====

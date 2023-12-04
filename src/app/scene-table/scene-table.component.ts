@@ -8,6 +8,7 @@ import { firstValueFrom } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
 import { concatMap, delay } from 'rxjs/operators';
 import { CorsProxyService } from '../cors-proxy.service';
+import { ApiService } from '../api.service';
 
 interface Scene {
   id?: number;
@@ -19,6 +20,7 @@ interface Scene {
   imageUrl?: string;
   similarity_score?: number;
   best_match_file?: string;
+  selected?: true;
 }
 interface DalleResponse {
   generatedText: string;
@@ -31,6 +33,12 @@ interface DalleResponse {
 })
 export class SceneTableComponent implements OnInit {
   // clicked = false;
+  selectedScenes: Scene[] = [];
+  countdown: number = 60;
+  countdownInterval: any;
+  leoCountdownInterval: any;
+  leoCountdown: number = 30;
+  loading = false;
   doAllImages = false;
   scenes$ = new BehaviorSubject<Scene[]>([]);
   scenesObservable$ = this.scenes$.asObservable();
@@ -48,8 +56,16 @@ export class SceneTableComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private openaiService: OpenaiService,
-    private corsProxyService: CorsProxyService
+    private corsProxyService: CorsProxyService,
+    private apiService: ApiService
   ) {
+    // const x =
+    //   '(((Sacred Act of Creation))) A photorealistic depiction of the Almighty engaging with an inferior in the sacred act of creation, as described in "Let us make man in our image." The image should be highly detailed and realistic, resembling a photograph taken with a 70mm lens. The lighting should be soft and divine, with a celestial glow illuminating the scene. The background should be ethereal and heavenly, conveying a sense of reverence and divine collaboration.';
+    // const y =
+    //   '(((Divine Collaboration))) An artistic interpretation of the Almighty inviting an inferior to participate in the sacred act of creation with the phrase "Let us make man in our image." The image should be created in a Renaissance art style, inspired by the works of Michelangelo and Raphael. It should feature a majestic and harmonious composition with the Almighty and the inferior depicted in a grand manner. The camera angle should be slightly high, capturing the scene from a heavenly perspective. The lighting should be reminiscent of classic Renaissance paintings, with soft, golden hues and subtle chiaroscuro.';
+    // const z =
+    //   '(((Creation Collaboration Realistic Photography))) A realistic photographic representation of the Almighty engaging an inferior in the sacred act of creation, using the phrase "Let us make man in our image." The image should resemble a high-resolution photograph captured with a 50mm lens. The lighting should emulate the warm and inviting glow of a sacred space, creating a sense of awe and collaboration. The scene should be set in an indoor environment, perhaps a church or a temple, symbolizing the divine connection between the Almighty and the inferior.';
+    // this.generateLeoImg(x, y, z);
     // this.scenes$ = this.http.get<Scene[]>('./assets/scenes.json');
     // sub to scenes$ and log them
   }
@@ -63,9 +79,6 @@ export class SceneTableComponent implements OnInit {
       .get<Scene[]>('./assets/scenes.json')
       .subscribe((data: Scene[]) => {
         this.scenes$.next(data);
-        // if (this.doAllImages) {
-        //   this.generateGptImages(data);
-        // }
       });
     // if (loadedScenes) {
     //   this.scenes$.next(loadedScenes); // Update the BehaviorSubject with the scenes from local storage
@@ -76,23 +89,27 @@ export class SceneTableComponent implements OnInit {
     this.scenes$.subscribe((data: Scene[]) => {
       let totalLength = 0;
 
-      data.forEach((scene: Scene) => {
-        if (scene.original_text) {
-          scene.length = scene.original_text.length * 0.066;
-          // generate all gpt Prompts
-          // this.generateGptPrompt(scene);
+      //   if (scene.original_text) {
+      //     scene.length = scene.original_text.length * 0.066;
+      //     // generate all gpt Prompts
+      //     // this.generateGptPrompt(scene);
 
-          if (!scene.gptPrompt || scene.gptPrompt.trim().length === 0) {
-            // this.generateGptPrompt(scene);
-          }
+      //     if (!scene.gptPrompt || scene.gptPrompt.trim().length === 0) {
+      //       // this.generateGptPrompt(scene);
+      //     }
 
-          this.picsLengthArray.push(scene.original_text.length * 0.066);
-          totalLength += scene.original_text.length;
-        }
-      });
+      //     this.picsLengthArray.push(scene.original_text.length * 0.066);
+      //     totalLength += scene.original_text.length;
+      //   }
+      // });
       console.log(this.picsLengthArray);
       let averageLength = totalLength / data.length;
-      console.log(`Average length of a scene: ${0.066 * averageLength}`);
+      console.log(
+        `Average length of a scene read by Charles II: ${0.066 * averageLength}`
+      );
+      console.log(
+        `Average length of a scene read by Sarag: ${0.06006 * averageLength}`
+      );
       this.saveScenesToLocalStorage(data);
     });
     // this.scenes$ = this.http.get<Scene[]>('./assets/scenes.json');
@@ -151,25 +168,137 @@ export class SceneTableComponent implements OnInit {
           });
         });
   }
+  async generateAllDalle3Images(scenes: Scene[]): Promise<void> {
+    let callCount = 0;
+    console.log('processScenes started - callCount: ', callCount);
+
+    for (let i = 0; i < scenes.length; i++) {
+      const scene = scenes[i];
+      if (scene.time) {
+        await this.generateGptImage(scene);
+        callCount++;
+
+        await new Promise((resolve) => setTimeout(resolve, 3000));
+
+        if (callCount % 5 === 0 && i < scenes.length - 1) {
+          console.log(`Made 5 calls, taking a 61-second break`);
+          await new Promise((resolve) => setTimeout(resolve, 61000));
+        }
+      }
+    }
+
+    console.log('processScenes ended - callCount: ', callCount);
+  }
 
   generateGptImage(scene: Scene): void {
-    this.openaiService.generateImage(scene.prompt, 1).subscribe((urls) => {
-      // Update the scene with the image URL
-      scene.imageUrl = urls[0]; // Since we're only generating one image
+    this.openaiService
+      .generateImage(scene.prompt, 1, scene.time)
+      .subscribe((urls) => {
+        // Update the scene with the image URL
+        console.log('dalle3 urls: ', urls);
+        scene.imageUrl = urls[0]; // Since we're only generating one image
 
-      // Update the BehaviorSubject with the new scene data
-      const updatedScenes = this.scenes$.getValue().map((sc) => {
-        console.log(sc.imageUrl);
-        if (sc === scene) {
-          // Find the scene to update (you could also match by an ID if available)
-          return { ...sc, imageUrl: scene.imageUrl };
-        }
-        return sc;
+        // Update the BehaviorSubject with the new scene data
+        const updatedScenes = this.scenes$.getValue().map((sc) => {
+          console.log(sc.imageUrl);
+          if (sc === scene) {
+            // Find the scene to update (you could also match by an ID if available)
+            return { ...sc, imageUrl: scene.imageUrl };
+          }
+          return sc;
+        });
+
+        this.scenes$.next(updatedScenes); // Emit the updated scenes
       });
-
-      this.scenes$.next(updatedScenes); // Emit the updated scenes
-    });
   }
+  generateImagesForScenes(): void {
+    // Iterate over the scenes and call generateGptImage for each scene
+    for (const scene of this.selectedScenes) {
+      this.generateGptImage(scene);
+    }
+  }
+  updateSelectedScenes(): void {
+    this.selectedScenes = this.scenes$
+      .getValue()
+      .filter((scene) => scene.selected);
+  }
+
+  makeLeoAiImage(scene: Scene) {
+    const promptText = scene.prompt;
+    this.apiService.createGeneration(promptText).subscribe(
+      (response) => {
+        console.log(response);
+        // Handle the API response here
+      },
+      (error) => {
+        console.error('An error occurred:', error);
+        // Handle the API error here
+      }
+    );
+  }
+  makeAllLeoImages(scenes: Scene[]) {
+    // Loop through the scenes and call the function for selected times
+    for (const scene of scenes) {
+      this.makeLeoAiImage(scene);
+    }
+  }
+
+  generateLeoImg(photorealistic: string, artistic: string, realistic: string) {
+    this.apiService.createGeneration(photorealistic).subscribe(
+      (response) => {
+        console.log(response);
+        // Handle the API response here
+      },
+      (error) => {
+        console.error('An error occurred:', error);
+        // Handle the API error here
+      }
+    );
+    this.apiService.createGeneration(artistic).subscribe(
+      (response) => {
+        console.log(response);
+        // Handle the API response here
+      },
+      (error) => {
+        console.error('An error occurred:', error);
+        // Handle the API error here
+      }
+    );
+    this.apiService.createGeneration(realistic).subscribe(
+      (response) => {
+        console.log(response);
+        // Handle the API response here
+      },
+      (error) => {
+        console.error('An error occurred:', error);
+        // Handle the API error here
+      }
+    );
+  }
+
+  // 61 sec time out
+  // generateGptImage(scene: Scene): void {
+  //   // Simulate a 61-second loading time
+  //   setTimeout(() => {
+  //     this.openaiService.generateImage(scene.prompt, 1).subscribe((urls) => {
+  //       // Update the scene with the image URL
+  //       scene.imageUrl = urls[0]; // Since we're only generating one image
+
+  //       // Update the BehaviorSubject with the new scene data
+  //       const updatedScenes = this.scenes$.getValue().map((sc) => {
+  //         console.log(sc.imageUrl);
+  //         if (sc === scene) {
+  //           // Find the scene to update (you could also match by an ID if available)
+  //           return { ...sc, imageUrl: scene.imageUrl };
+  //         }
+  //         return sc;
+  //       });
+
+  //       this.scenes$.next(updatedScenes); // Emit the updated scenes
+  //     });
+  //   }, 61000); // 61 seconds in milliseconds
+  // }
+
   // generateGptImage(scene: Scene): void {
   //   this.openaiService.generateImage(scene.prompt, 1).subscribe((urls) => {
   //     const imageUrl = urls[0]; // Since we're only generating one image
@@ -201,39 +330,6 @@ export class SceneTableComponent implements OnInit {
   //       });
   //   });
   // }
-
-  generateGptImages(scenes: Scene[]): void {
-    // Create an array to store observables for all scene image generation requests
-    const imageGenerationObservables = scenes.map((scene) =>
-      this.openaiService.generateImage(scene.prompt, 1).pipe(
-        // Introduce a delay of 1000 milliseconds (1 second) between requests
-        delay(7000)
-      )
-    );
-
-    // Use concatMap to process requests sequentially with a delay
-    this.scenesObservable$
-      .pipe(concatMap(() => forkJoin(imageGenerationObservables)))
-      .subscribe((imageUrlsArray) => {
-        scenes.forEach((scene, index) => {
-          const imageUrl = imageUrlsArray[index][0]; // Assuming we're generating one image
-          console.log(scene.time, +' ' + imageUrl);
-          scene.imageUrl = imageUrl;
-        });
-
-        // Emit the updated scenes
-        this.updateScenes(scenes);
-
-        // Now, you can also print the scenes with image URLs to the console
-        console.log('Scenes with Image URLs:');
-        scenes.forEach((scene, index) => {
-          console.log(`Scene ${index + 1}:`);
-          console.log('Prompt:', scene.prompt);
-          console.log('Image URL:', scene.imageUrl);
-          // Add more properties as needed
-        });
-      });
-  }
 
   private updateScenes(scenes: Scene[]): void {
     // Assuming you have a BehaviorSubject for scenes$

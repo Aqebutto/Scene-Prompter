@@ -7,7 +7,7 @@ target_scene_length = 10
 average_reading_speed = 225
 
 # Load the text of the story from a file
-with open("godhead.txt", "r") as f:
+with open("CT4K-e2.txt", "r") as f:
     text = f.read()
 
 # Remove any extra whitespace from the text
@@ -50,7 +50,7 @@ if current_scene:
     scenes.append(current_scene.strip())
 
 # Export the scenes to a text file
-with open("godhead_10.txt", "w") as f:
+with open("CT4K-e2_10.txt", "w") as f:
     for i, scene in enumerate(scenes):
         f.write(f"Time: {i*10}:\n")
         f.write("Find a subject in this text:\n")

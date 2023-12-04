@@ -1,0 +1,30 @@
+/* Style the text area for the original text input */
+textarea.original-text {
+  width: 100%;
+  height: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+/* Style the Process Text button */
+button.process-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Style the processed text output */
+textarea.processed-text {
+  width: 100%;
+  height: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
